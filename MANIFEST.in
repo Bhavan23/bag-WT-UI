@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bagwtui *.css
+recursive-include bagwtui *.csv
+recursive-include bagwtui *.html
+recursive-include bagwtui *.ico
+recursive-include bagwtui *.js
+recursive-include bagwtui *.json
+recursive-include bagwtui *.md
+recursive-include bagwtui *.png
+recursive-include bagwtui *.py
+recursive-include bagwtui *.svg
+recursive-include bagwtui *.txt
+recursive-exclude bagwtui *.pyc
