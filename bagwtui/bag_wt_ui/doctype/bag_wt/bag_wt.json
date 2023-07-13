@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-04 13:32:38.601772",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enq_no",
+  "enq_name",
+  "bag_type",
+  "bag_wt",
+  "no_of_bags",
+  "po_no",
+  "po_date",
+  "bag_size",
+  "webbing_type",
+  "tunnel_attachment_type",
+  "linear_type",
+  "webbing_add_ons",
+  "categories",
+  "body_fabric",
+  "extras_dese",
+  "accessories",
+  "top_attachment_type",
+  "bottom_attachment_type",
+  "secondary_top",
+  "secondary_bottom",
+  "top_attachment_addons",
+  "bottom_attachment_addons",
+  "top_attachment_addons_type",
+  "bottom_attachment_addons_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "enq_no",
+   "fieldtype": "Data",
+   "label": "Enq No"
+  },
+  {
+   "fieldname": "enq_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "bag_type",
+   "fieldtype": "Select",
+   "label": "Bag Type",
+   "options": "\nCircular\nU+2\n4 Panel"
+  },
+  {
+   "fieldname": "bag_wt",
+   "fieldtype": "Float",
+   "label": "Bag Wt"
+  },
+  {
+   "fieldname": "no_of_bags",
+   "fieldtype": "Int",
+   "label": "No Of Bags"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "Po No"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Data",
+   "label": "Po Date"
+  },
+  {
+   "fieldname": "bag_size",
+   "fieldtype": "Table",
+   "label": "Bag Size",
+   "options": "Bag Size"
+  },
+  {
+   "fieldname": "webbing_type",
+   "fieldtype": "Table",
+   "label": "Webbing Type",
+   "options": "Webbing Type"
+  },
+  {
+   "fieldname": "tunnel_attachment_type",
+   "fieldtype": "Table",
+   "label": "Tunnel Attachment Type",
+   "options": "Tunnel Attachment Type"
+  },
+  {
+   "fieldname": "linear_type",
+   "fieldtype": "Table",
+   "label": "Linear Type",
+   "options": "Linear Type"
+  },
+  {
+   "fieldname": "webbing_add_ons",
+   "fieldtype": "Table",
+   "label": "Webbing Add Ons",
+   "options": "Webbing Add Ons"
+  },
+  {
+   "fieldname": "categories",
+   "fieldtype": "Table",
+   "label": "Categories",
+   "options": "Categories"
+  },
+  {
+   "fieldname": "body_fabric",
+   "fieldtype": "Table",
+   "label": "Body Fabric",
+   "options": "Body Fabric"
+  },
+  {
+   "fieldname": "extras_dese",
+   "fieldtype": "Table",
+   "label": "Extras Dese",
+   "options": "Extras Dese"
+  },
+  {
+   "fieldname": "accessories",
+   "fieldtype": "Table",
+   "label": "Accessories",
+   "options": "Accessories"
+  },
+  {
+   "fieldname": "top_attachment_type",
+   "fieldtype": "Table",
+   "label": "Top Attachment Type",
+   "options": "Top Attachment Type"
+  },
+  {
+   "fieldname": "bottom_attachment_type",
+   "fieldtype": "Table",
+   "label": "Bottom Attachment Type",
+   "options": "Bottom Attachment Type"
+  },
+  {
+   "fieldname": "secondary_top",
+   "fieldtype": "Table",
+   "label": "Secondary Top",
+   "options": "Secondary Top"
+  },
+  {
+   "fieldname": "secondary_bottom",
+   "fieldtype": "Table",
+   "label": "Secondary Bottom",
+   "options": "Secondary Bottom"
+  },
+  {
+   "fieldname": "top_attachment_addons",
+   "fieldtype": "Table",
+   "label": "Top Attachment Addons",
+   "options": "Top Attachment Addons"
+  },
+  {
+   "fieldname": "bottom_attachment_addons",
+   "fieldtype": "Table",
+   "label": "Bottom Attachment Addons",
+   "options": "Bottom Attachment Addons"
+  },
+  {
+   "fieldname": "top_attachment_addons_type",
+   "fieldtype": "Table",
+   "label": "Top Attachment Addons Type",
+   "options": "Top Attachment Addons Type"
+  },
+  {
+   "fieldname": "bottom_attachment_addons_type",
+   "fieldtype": "Table",
+   "label": "Bottom Attachment Addons Type",
+   "options": "Bottom Attachment Addons Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-13 11:17:32.075755",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Bag WT",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

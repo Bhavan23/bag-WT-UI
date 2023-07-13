@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-10 15:02:51.224161",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_loop_type",
+  "full_loop_color",
+  "full_loop_size",
+  "full_loop_gsm",
+  "top_band_type",
+  "top_band_color",
+  "top_band_size",
+  "top_band_gsm",
+  "stevdor_type",
+  "stevdor_color",
+  "stevdor_size",
+  "stevdor_gsm",
+  "sleeve_type",
+  "sleeve_color",
+  "sleeve_size",
+  "sleeve_gsm",
+  "patch_type",
+  "felt_patch_type",
+  "felt_patch_color",
+  "felt_patch_size",
+  "felt_patch_gsm"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_loop_type",
+   "fieldtype": "Select",
+   "label": "Full Loop Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "full_loop_color",
+   "fieldtype": "Select",
+   "label": "Full Loop Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "full_loop_size",
+   "fieldtype": "Int",
+   "label": "Full Loop Size"
+  },
+  {
+   "fieldname": "full_loop_gsm",
+   "fieldtype": "Int",
+   "label": "Full Loop GSM"
+  },
+  {
+   "fieldname": "top_band_type",
+   "fieldtype": "Select",
+   "label": "Top Band Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "top_band_color",
+   "fieldtype": "Select",
+   "label": "Top Band Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "top_band_size",
+   "fieldtype": "Int",
+   "label": "Top Band Size"
+  },
+  {
+   "fieldname": "top_band_gsm",
+   "fieldtype": "Int",
+   "label": "Top Band GSM"
+  },
+  {
+   "fieldname": "stevdor_type",
+   "fieldtype": "Select",
+   "label": "Stevdor Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "stevdor_color",
+   "fieldtype": "Select",
+   "label": "Stevdor Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "stevdor_size",
+   "fieldtype": "Int",
+   "label": "Stevdor Size"
+  },
+  {
+   "fieldname": "stevdor_gsm",
+   "fieldtype": "Int",
+   "label": "Stevdor GSM"
+  },
+  {
+   "fieldname": "sleeve_type",
+   "fieldtype": "Select",
+   "label": "Sleeve Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "sleeve_color",
+   "fieldtype": "Select",
+   "label": "Sleeve Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "sleeve_size",
+   "fieldtype": "Int",
+   "label": "Sleeve Size"
+  },
+  {
+   "fieldname": "sleeve_gsm",
+   "fieldtype": "Int",
+   "label": "Sleeve GSM"
+  },
+  {
+   "fieldname": "patch_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Patch Type",
+   "options": "Felt Patch"
+  },
+  {
+   "fieldname": "felt_patch_type",
+   "fieldtype": "Select",
+   "label": "Felt Patch Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "felt_patch_color",
+   "fieldtype": "Select",
+   "label": "Felt Patch Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "felt_patch_size",
+   "fieldtype": "Int",
+   "label": "Felt Patch Size"
+  },
+  {
+   "fieldname": "felt_patch_gsm",
+   "fieldtype": "Int",
+   "label": "Felt Patch GSM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:03:38.085702",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Webbing Add Ons",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

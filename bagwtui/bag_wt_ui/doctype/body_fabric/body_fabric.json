@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-10 16:18:27.955702",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fabric_type",
+  "fabric_gsm",
+  "fabric_rf",
+  "fabric_coated",
+  "fabric_total",
+  "fabric_color",
+  "fabric_sp_type",
+  "fabric_sp_gsm",
+  "fabric_sp_rf",
+  "fabric_sp_coated",
+  "fabric_sp_total",
+  "fabric_sp_color",
+  "base_gsm__4p_type",
+  "base_gsm__4p_gsm",
+  "base_gsm__4p_rf",
+  "base_gsm__4p_coated",
+  "base_gsm__4p_total",
+  "base_gsm__4p_color",
+  "body_attachment_type",
+  "body_attachment_gsm",
+  "body_attachment_rf",
+  "body_attachment_coated",
+  "body_attachment_total",
+  "body_attachment_color",
+  "extra_bases_type",
+  "extra_bases_nos"
+ ],
+ "fields": [
+  {
+   "fieldname": "fabric_type",
+   "fieldtype": "Select",
+   "label": "Fabric Type",
+   "options": "PP Flat\nPP Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "fabric_gsm",
+   "fieldtype": "Int",
+   "label": "Fabric GSM"
+  },
+  {
+   "fieldname": "fabric_rf",
+   "fieldtype": "Int",
+   "label": "Fabric RF"
+  },
+  {
+   "fieldname": "fabric_coated",
+   "fieldtype": "Int",
+   "label": "Fabric Coated"
+  },
+  {
+   "fieldname": "fabric_total",
+   "fieldtype": "Int",
+   "label": "Fabric Total"
+  },
+  {
+   "fieldname": "fabric_color",
+   "fieldtype": "Select",
+   "label": "Fabric Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "fabric_sp_type",
+   "fieldtype": "Select",
+   "label": "Fabric Sp Type",
+   "options": "PP Flat\nPP Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "fabric_sp_gsm",
+   "fieldtype": "Int",
+   "label": "Fabric Sp GSM"
+  },
+  {
+   "fieldname": "fabric_sp_rf",
+   "fieldtype": "Int",
+   "label": "Fabric Sp RF"
+  },
+  {
+   "fieldname": "fabric_sp_coated",
+   "fieldtype": "Int",
+   "label": "Fabric Sp Coated"
+  },
+  {
+   "fieldname": "fabric_sp_total",
+   "fieldtype": "Int",
+   "label": "Fabric Sp Total"
+  },
+  {
+   "fieldname": "fabric_sp_color",
+   "fieldtype": "Select",
+   "label": "Fabric Sp Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "base_gsm__4p_type",
+   "fieldtype": "Select",
+   "label": "Base GSM  4p Type",
+   "options": "PP Flat\nPP Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "base_gsm__4p_gsm",
+   "fieldtype": "Int",
+   "label": "Base GSM  4p GSM"
+  },
+  {
+   "fieldname": "base_gsm__4p_rf",
+   "fieldtype": "Int",
+   "label": "Base GSM  4p RF"
+  },
+  {
+   "fieldname": "base_gsm__4p_coated",
+   "fieldtype": "Int",
+   "label": "Base GSM  4p Coated"
+  },
+  {
+   "fieldname": "base_gsm__4p_total",
+   "fieldtype": "Int",
+   "label": "Base GSM  4p Total"
+  },
+  {
+   "fieldname": "base_gsm__4p_color",
+   "fieldtype": "Select",
+   "label": "Base GSM  4p Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "body_attachment_type",
+   "fieldtype": "Select",
+   "label": "Body Attachment Type",
+   "options": "Baffle\nNet Baffle\nNA"
+  },
+  {
+   "fieldname": "body_attachment_gsm",
+   "fieldtype": "Int",
+   "label": "Body Attachment GSM"
+  },
+  {
+   "fieldname": "body_attachment_rf",
+   "fieldtype": "Int",
+   "label": "Body Attachment RF"
+  },
+  {
+   "fieldname": "body_attachment_coated",
+   "fieldtype": "Int",
+   "label": "Body Attachment Coated"
+  },
+  {
+   "fieldname": "body_attachment_total",
+   "fieldtype": "Int",
+   "label": "Body Attachment Total"
+  },
+  {
+   "fieldname": "body_attachment_color",
+   "fieldtype": "Select",
+   "label": "Body Attachment Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "extra_bases_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Extra Bases Type",
+   "options": "Nos"
+  },
+  {
+   "fieldname": "extra_bases_nos",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Extra Bases Nos"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:04:17.515213",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Body Fabric",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

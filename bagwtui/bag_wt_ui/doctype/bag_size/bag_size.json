@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 14:56:16.149745",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "od_or_id",
+  "od_layers",
+  "od_l",
+  "od_wsp",
+  "od_h",
+  "id_layers",
+  "id_l",
+  "id_wsp",
+  "id_h",
+  "extra_fold_l",
+  "extra_fold_wsp",
+  "extra_fold_h",
+  "cross_corner_layers",
+  "butterfly_fold_layers",
+  "butterfly_fold_h",
+  "net_total_l",
+  "net_total_w_sp",
+  "net_total_h",
+  "sf",
+  "swl"
+ ],
+ "fields": [
+  {
+   "fieldname": "od_or_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "OD Or ID"
+  },
+  {
+   "fieldname": "od_layers",
+   "fieldtype": "Int",
+   "label": "OD Layers"
+  },
+  {
+   "fieldname": "od_l",
+   "fieldtype": "Int",
+   "label": "OD L"
+  },
+  {
+   "fieldname": "od_wsp",
+   "fieldtype": "Int",
+   "label": "OD W SP"
+  },
+  {
+   "fieldname": "od_h",
+   "fieldtype": "Int",
+   "label": "OD H"
+  },
+  {
+   "fieldname": "id_layers",
+   "fieldtype": "Int",
+   "label": "ID Layers"
+  },
+  {
+   "fieldname": "id_l",
+   "fieldtype": "Int",
+   "label": "ID L"
+  },
+  {
+   "fieldname": "id_wsp",
+   "fieldtype": "Int",
+   "label": "ID W SP"
+  },
+  {
+   "fieldname": "id_h",
+   "fieldtype": "Int",
+   "label": "ID H"
+  },
+  {
+   "fieldname": "extra_fold_l",
+   "fieldtype": "Int",
+   "label": "Extra Fold L"
+  },
+  {
+   "fieldname": "extra_fold_wsp",
+   "fieldtype": "Int",
+   "label": "Extra Fold W SP"
+  },
+  {
+   "fieldname": "extra_fold_h",
+   "fieldtype": "Int",
+   "label": "Extra Fold H"
+  },
+  {
+   "fieldname": "cross_corner_layers",
+   "fieldtype": "Select",
+   "label": "Cross Corner Layers",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "butterfly_fold_layers",
+   "fieldtype": "Select",
+   "label": "Butterfly Fold Layers",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "butterfly_fold_h",
+   "fieldtype": "Int",
+   "label": "Butterfly Fold H"
+  },
+  {
+   "fieldname": "net_total_l",
+   "fieldtype": "Float",
+   "label": "Net Total L"
+  },
+  {
+   "fieldname": "net_total_w_sp",
+   "fieldtype": "Float",
+   "label": "Net Total W SP"
+  },
+  {
+   "fieldname": "net_total_h",
+   "fieldtype": "Float",
+   "label": "Net Total H"
+  },
+  {
+   "fieldname": "sf",
+   "fieldtype": "Data",
+   "label": "SF"
+  },
+  {
+   "fieldname": "swl",
+   "fieldtype": "Float",
+   "label": "SWL"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 11:50:45.684495",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Bag Size",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-11 17:02:10.446049",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tp_outer_tie_width",
+  "tp_outer_tie_gsm",
+  "tp_outer_tie_color",
+  "tp_inner_tie_ds_width",
+  "tp_inner_tie_ds_gsm",
+  "tp_inner_tie_ds_color",
+  "tp_pattel_rope_width",
+  "tp_pattel_rope_gsm",
+  "tp_pattel_rope_color",
+  "tp_hose_pipe_width",
+  "tp_hose_pipe_gsm",
+  "tp_hose_pipe_color"
+ ],
+ "fields": [
+  {
+   "fieldname": "tp_outer_tie_width",
+   "fieldtype": "Int",
+   "label": "Outer Tie Width"
+  },
+  {
+   "fieldname": "tp_outer_tie_gsm",
+   "fieldtype": "Int",
+   "label": "Outer Tie GSM"
+  },
+  {
+   "fieldname": "tp_outer_tie_color",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Outer Tie Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_inner_tie_ds_width",
+   "fieldtype": "Int",
+   "label": "Inner Tie DS Width"
+  },
+  {
+   "fieldname": "tp_inner_tie_ds_gsm",
+   "fieldtype": "Int",
+   "label": "Inner Tie DS GSM"
+  },
+  {
+   "fieldname": "tp_inner_tie_ds_color",
+   "fieldtype": "Select",
+   "label": "Inner Tie DS Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_pattel_rope_width",
+   "fieldtype": "Int",
+   "label": "Pattel Rope Width"
+  },
+  {
+   "fieldname": "tp_pattel_rope_gsm",
+   "fieldtype": "Int",
+   "label": "Pattel Rope GSM"
+  },
+  {
+   "fieldname": "tp_pattel_rope_color",
+   "fieldtype": "Select",
+   "label": "Pattel Rope Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_hose_pipe_width",
+   "fieldtype": "Int",
+   "label": "Hose Pipe Width"
+  },
+  {
+   "fieldname": "tp_hose_pipe_gsm",
+   "fieldtype": "Int",
+   "label": "Hose Pipe GSM"
+  },
+  {
+   "fieldname": "tp_hose_pipe_color",
+   "fieldtype": "Select",
+   "label": "Hose Pipe Color",
+   "options": "White\nOrange"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:07:18.723921",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Top Attachment Addons Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

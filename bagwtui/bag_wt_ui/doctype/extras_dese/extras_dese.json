@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-12 11:29:48.555325",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "yarn",
+  "yarn_yes_no",
+  "yarn_denier",
+  "yarn_grams1",
+  "yarn_grams2",
+  "b_lock",
+  "b_lock_yes_no",
+  "b_lock_grams1",
+  "extra1_no",
+  "extra1_width",
+  "extra1_gsm",
+  "extra1_cut_length",
+  "extra1_weight",
+  "extra2_no",
+  "extra2_width",
+  "extra2_gsm",
+  "extra2_cut_length",
+  "extra2_weight",
+  "extra3_no",
+  "extra3_width",
+  "extra3_gsm",
+  "extra3_cut_length",
+  "extra3_weight"
+ ],
+ "fields": [
+  {
+   "fieldname": "yarn",
+   "fieldtype": "Data",
+   "label": "Yarn"
+  },
+  {
+   "fieldname": "yarn_yes_no",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Yarn Yes No",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "yarn_denier",
+   "fieldtype": "Select",
+   "label": "Yarn Denier",
+   "options": "5000"
+  },
+  {
+   "fieldname": "yarn_grams1",
+   "fieldtype": "Data",
+   "label": "Yarn Grams1"
+  },
+  {
+   "fieldname": "yarn_grams2",
+   "fieldtype": "Data",
+   "label": "Yarn Grams2"
+  },
+  {
+   "fieldname": "b_lock",
+   "fieldtype": "Data",
+   "label": "B Lock "
+  },
+  {
+   "fieldname": "b_lock_yes_no",
+   "fieldtype": "Select",
+   "label": "B Lock Yes No",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "b_lock_grams1",
+   "fieldtype": "Data",
+   "label": "B Lock Grams1"
+  },
+  {
+   "fieldname": "extra1_no",
+   "fieldtype": "Data",
+   "label": "Extra1 No"
+  },
+  {
+   "fieldname": "extra1_width",
+   "fieldtype": "Data",
+   "label": "Extra1 Width"
+  },
+  {
+   "fieldname": "extra1_gsm",
+   "fieldtype": "Data",
+   "label": "Extra1 GSM"
+  },
+  {
+   "fieldname": "extra1_cut_length",
+   "fieldtype": "Data",
+   "label": "Extra1 Cut Length"
+  },
+  {
+   "fieldname": "extra1_weight",
+   "fieldtype": "Data",
+   "label": "Extra1 Weight"
+  },
+  {
+   "fieldname": "extra2_no",
+   "fieldtype": "Data",
+   "label": "Extra2 No"
+  },
+  {
+   "fieldname": "extra2_width",
+   "fieldtype": "Data",
+   "label": "Extra2 Width"
+  },
+  {
+   "fieldname": "extra2_gsm",
+   "fieldtype": "Data",
+   "label": "Extra2 GSM"
+  },
+  {
+   "fieldname": "extra2_cut_length",
+   "fieldtype": "Data",
+   "label": "Extra2 Cut Length"
+  },
+  {
+   "fieldname": "extra2_weight",
+   "fieldtype": "Data",
+   "label": "Extra2 Weight"
+  },
+  {
+   "fieldname": "extra3_no",
+   "fieldtype": "Data",
+   "label": "Extra3 No"
+  },
+  {
+   "fieldname": "extra3_width",
+   "fieldtype": "Data",
+   "label": "Extra3 Width"
+  },
+  {
+   "fieldname": "extra3_gsm",
+   "fieldtype": "Data",
+   "label": "Extra3 GSM"
+  },
+  {
+   "fieldname": "extra3_cut_length",
+   "fieldtype": "Data",
+   "label": "Extra3 Cut Length"
+  },
+  {
+   "fieldname": "extra3_weight",
+   "fieldtype": "Data",
+   "label": "Extra3 Weight"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:04:34.253382",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Extras Dese",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

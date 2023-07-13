@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-10 17:46:55.503014",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "body1_printing",
+  "body2_sp_printing",
+  "color_printing",
+  "others1_printing",
+  "others2_printing",
+  "body1_doc_pocket",
+  "body2_sp_doc_pocket",
+  "color_doc_pocket",
+  "others1_doc_pocket",
+  "others2_doc_pocket",
+  "body1_label",
+  "body2_sp_label",
+  "color_label",
+  "others1_label",
+  "others2_label"
+ ],
+ "fields": [
+  {
+   "fieldname": "body1_printing",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Body1 Printing",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "body2_sp_printing",
+   "fieldtype": "Data",
+   "label": "Body2 SP Printing"
+  },
+  {
+   "fieldname": "color_printing",
+   "fieldtype": "Data",
+   "label": "Color Printing"
+  },
+  {
+   "fieldname": "others1_printing",
+   "fieldtype": "Data",
+   "label": "Others1 Printing"
+  },
+  {
+   "fieldname": "others2_printing",
+   "fieldtype": "Data",
+   "label": "Others2 Printing"
+  },
+  {
+   "fieldname": "body1_doc_pocket",
+   "fieldtype": "Select",
+   "label": "Body1 Doc Pocket",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "body2_sp_doc_pocket",
+   "fieldtype": "Int",
+   "label": "Body2 SP Doc Pocket"
+  },
+  {
+   "fieldname": "color_doc_pocket",
+   "fieldtype": "Int",
+   "label": "Color Doc Pocket"
+  },
+  {
+   "fieldname": "others1_doc_pocket",
+   "fieldtype": "Int",
+   "label": "Others1 Doc Pocket"
+  },
+  {
+   "fieldname": "others2_doc_pocket",
+   "fieldtype": "Int",
+   "label": "Others2 Doc Pocket"
+  },
+  {
+   "fieldname": "body1_label",
+   "fieldtype": "Select",
+   "label": "Body1 Label",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "body2_sp_label",
+   "fieldtype": "Int",
+   "label": "Body2 SP Label"
+  },
+  {
+   "fieldname": "color_label",
+   "fieldtype": "Int",
+   "label": "Color Label"
+  },
+  {
+   "fieldname": "others1_label",
+   "fieldtype": "Int",
+   "label": "Others1 Label"
+  },
+  {
+   "fieldname": "others2_label",
+   "fieldtype": "Int",
+   "label": "Others2 Label"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:04:49.923459",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Accessories",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

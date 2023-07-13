@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-10 13:52:41.673313",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "linear_type",
+  "normal_nos",
+  "normal_yes_no",
+  "normal_micron",
+  "normal_excess_ht",
+  "normal_excess_wd",
+  "normal_gluing",
+  "normal_tabling",
+  "normal_tabling_nos",
+  "normal_color"
+ ],
+ "fields": [
+  {
+   "fieldname": "linear_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": " Linear Type",
+   "options": "Normal"
+  },
+  {
+   "fieldname": "normal_nos",
+   "fieldtype": "Int",
+   "label": "Normal Nos"
+  },
+  {
+   "fieldname": "normal_yes_no",
+   "fieldtype": "Select",
+   "label": "Normal Yes No",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "normal_micron",
+   "fieldtype": "Int",
+   "label": "Normal Micron"
+  },
+  {
+   "fieldname": "normal_excess_ht",
+   "fieldtype": "Int",
+   "label": "Normal Excess Ht"
+  },
+  {
+   "fieldname": "normal_excess_wd",
+   "fieldtype": "Int",
+   "label": "Normal Excess wd"
+  },
+  {
+   "fieldname": "normal_gluing",
+   "fieldtype": "Select",
+   "label": "Normal Gluing",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "normal_tabling",
+   "fieldtype": "Select",
+   "label": "Normal Tabling",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "normal_tabling_nos",
+   "fieldtype": "Int",
+   "label": "Normal Tabling Nos"
+  },
+  {
+   "fieldname": "normal_color",
+   "fieldtype": "Select",
+   "label": "Normal Color",
+   "options": "Natural"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:02:15.598725",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Linear Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

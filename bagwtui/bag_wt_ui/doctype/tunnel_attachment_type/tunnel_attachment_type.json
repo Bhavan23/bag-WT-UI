@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-06 17:36:25.458164",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tunnel_attachment_type",
+  "baffle_gsm",
+  "baffle_coated",
+  "baffle_width",
+  "baffle_length",
+  "baffle_color",
+  "net_baffle_gsm",
+  "net_baffle_coated",
+  "net_baffle_width",
+  "net_baffle_length",
+  "net_baffle_color",
+  "na_gsm",
+  "na_coated",
+  "na_width",
+  "na_length",
+  "na_color"
+ ],
+ "fields": [
+  {
+   "fieldname": "tunnel_attachment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tunnel Attachment Type",
+   "options": "Baffle\nNet Baffle\nNA"
+  },
+  {
+   "fieldname": "baffle_gsm",
+   "fieldtype": "Int",
+   "label": "Baffle GSM"
+  },
+  {
+   "fieldname": "baffle_coated",
+   "fieldtype": "Int",
+   "label": "Baffle Coated"
+  },
+  {
+   "fieldname": "baffle_width",
+   "fieldtype": "Int",
+   "label": "Baffle Width"
+  },
+  {
+   "fieldname": "baffle_length",
+   "fieldtype": "Int",
+   "label": "Baffle Length"
+  },
+  {
+   "fieldname": "baffle_color",
+   "fieldtype": "Int",
+   "label": "Baffle Color"
+  },
+  {
+   "fieldname": "net_baffle_gsm",
+   "fieldtype": "Int",
+   "label": "Net Baffle GSM"
+  },
+  {
+   "fieldname": "net_baffle_coated",
+   "fieldtype": "Int",
+   "label": "Net Baffle Coated"
+  },
+  {
+   "fieldname": "net_baffle_width",
+   "fieldtype": "Int",
+   "label": "Net Baffle Width"
+  },
+  {
+   "fieldname": "net_baffle_length",
+   "fieldtype": "Int",
+   "label": "Net Baffle Length"
+  },
+  {
+   "fieldname": "net_baffle_color",
+   "fieldtype": "Int",
+   "label": "Net Baffle Color"
+  },
+  {
+   "fieldname": "na_gsm",
+   "fieldtype": "Int",
+   "label": "NA GSM"
+  },
+  {
+   "fieldname": "na_coated",
+   "fieldtype": "Int",
+   "label": "NA Coated"
+  },
+  {
+   "fieldname": "na_width",
+   "fieldtype": "Int",
+   "label": "NA Width"
+  },
+  {
+   "fieldname": "na_length",
+   "fieldtype": "Int",
+   "label": "NA Length"
+  },
+  {
+   "fieldname": "na_color",
+   "fieldtype": "Int",
+   "label": "NA Color"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:01:44.181891",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Tunnel Attachment Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

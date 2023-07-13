@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-12 11:08:59.269716",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dust_proof",
+  "felt",
+  "dust_proof_body",
+  "dust_proof_baffle",
+  "dust_proof_att",
+  "dust_proof_nos",
+  "dust_proof_gsm",
+  "felt_body",
+  "felt_baffle",
+  "felt_att",
+  "felt_nos",
+  "felt_gsm"
+ ],
+ "fields": [
+  {
+   "fieldname": "dust_proof",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dust Proof",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "felt",
+   "fieldtype": "Select",
+   "label": "Felt",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "dust_proof_body",
+   "fieldtype": "Select",
+   "label": "Dust Proof Body",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "dust_proof_baffle",
+   "fieldtype": "Select",
+   "label": "Dust Proof Baffle",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "dust_proof_att",
+   "fieldtype": "Select",
+   "label": "Dust Proof Att",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "dust_proof_nos",
+   "fieldtype": "Int",
+   "label": "Dust Proof Nos"
+  },
+  {
+   "fieldname": "dust_proof_gsm",
+   "fieldtype": "Int",
+   "label": "Dust Proof GSM"
+  },
+  {
+   "fieldname": "felt_body",
+   "fieldtype": "Select",
+   "label": "Felt Body",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "felt_baffle",
+   "fieldtype": "Select",
+   "label": "Felt Baffle",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "felt_att",
+   "fieldtype": "Select",
+   "label": "Felt Att"
+  },
+  {
+   "fieldname": "felt_nos",
+   "fieldtype": "Int",
+   "label": "Felt Nos"
+  },
+  {
+   "fieldname": "felt_gsm",
+   "fieldtype": "Int",
+   "label": "Felt GSM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:04:00.484664",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Categories",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

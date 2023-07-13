@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-11 16:37:40.483115",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bt_outer_tie",
+  "bt_inner_tie_ds",
+  "bt_pattel_closure",
+  "bt_skirt_open_corner"
+ ],
+ "fields": [
+  {
+   "fieldname": "bt_outer_tie",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Outer Tie",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "bt_inner_tie_ds",
+   "fieldtype": "Select",
+   "label": "Inner Tie DS",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "bt_pattel_closure",
+   "fieldtype": "Select",
+   "label": "Pattel Closure",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "bt_skirt_open_corner",
+   "fieldtype": "Select",
+   "label": "Skirt Open Corner",
+   "options": "Yes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:07:00.166273",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Bottom Attachment Addons",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

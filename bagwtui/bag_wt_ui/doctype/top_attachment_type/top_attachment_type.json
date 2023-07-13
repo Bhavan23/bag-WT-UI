@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-11 10:59:57.105311",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "top_attachment_type",
+  "tp_spout_fab_type",
+  "tp_spout_gsm",
+  "tp_spout_coated",
+  "tp_spout_total",
+  "tp_spout_dia",
+  "tp_spout_height",
+  "tp_spout_color",
+  "tp_skirt_fab_type",
+  "tp_skirt_gsm",
+  "tp_skirt_coated",
+  "tp_skirt_total",
+  "tp_skirt_dia",
+  "tp_skirt_height",
+  "tp_skirt_color",
+  "tp_na_fab_type",
+  "tp_na_gsm",
+  "tp_na_coated",
+  "tp_na_total",
+  "tp_na_dia",
+  "tp_na_height",
+  "tp_na_color",
+  "tp_hemming_fab_type",
+  "tp_bottom_pannel_type",
+  "tp_bottom_pannel_gsm",
+  "tp_bottom_pannel_coated",
+  "tp_bottom_pannel_total",
+  "tp_bottom_pannel_dia",
+  "tp_bottom_pannel_height"
+ ],
+ "fields": [
+  {
+   "fieldname": "top_attachment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Top Attachment Type",
+   "options": "Spout\nSkirt\nNA"
+  },
+  {
+   "fieldname": "tp_spout_fab_type",
+   "fieldtype": "Select",
+   "label": "Spout Fab Type",
+   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "tp_spout_gsm",
+   "fieldtype": "Int",
+   "label": "Spout GSM"
+  },
+  {
+   "fieldname": "tp_spout_coated",
+   "fieldtype": "Int",
+   "label": "Spout Coated"
+  },
+  {
+   "fieldname": "tp_spout_total",
+   "fieldtype": "Int",
+   "label": "Spout Total"
+  },
+  {
+   "fieldname": "tp_spout_dia",
+   "fieldtype": "Int",
+   "label": "Spout Dia"
+  },
+  {
+   "fieldname": "tp_spout_height",
+   "fieldtype": "Int",
+   "label": "Spout Height"
+  },
+  {
+   "fieldname": "tp_spout_color",
+   "fieldtype": "Select",
+   "label": "Spout Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_skirt_fab_type",
+   "fieldtype": "Select",
+   "label": "Skirt Fab Type",
+   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "tp_skirt_gsm",
+   "fieldtype": "Int",
+   "label": "Skirt GSM"
+  },
+  {
+   "fieldname": "tp_skirt_coated",
+   "fieldtype": "Int",
+   "label": "Skirt Coated"
+  },
+  {
+   "fieldname": "tp_skirt_total",
+   "fieldtype": "Int",
+   "label": "Skirt Total"
+  },
+  {
+   "fieldname": "tp_skirt_dia",
+   "fieldtype": "Int",
+   "label": "Skirt Dia"
+  },
+  {
+   "fieldname": "tp_skirt_height",
+   "fieldtype": "Int",
+   "label": "Skirt Height"
+  },
+  {
+   "fieldname": "tp_skirt_color",
+   "fieldtype": "Select",
+   "label": "Skirt Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_na_fab_type",
+   "fieldtype": "Select",
+   "label": "NA Fab Type",
+   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "tp_na_gsm",
+   "fieldtype": "Int",
+   "label": "NA GSM"
+  },
+  {
+   "fieldname": "tp_na_coated",
+   "fieldtype": "Int",
+   "label": "NA Coated"
+  },
+  {
+   "fieldname": "tp_na_total",
+   "fieldtype": "Int",
+   "label": "NA Total"
+  },
+  {
+   "fieldname": "tp_na_dia",
+   "fieldtype": "Int",
+   "label": "NA Dia"
+  },
+  {
+   "fieldname": "tp_na_height",
+   "fieldtype": "Int",
+   "label": "NA Height"
+  },
+  {
+   "fieldname": "tp_na_color",
+   "fieldtype": "Select",
+   "label": "NA Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_hemming_fab_type",
+   "fieldtype": "Select",
+   "label": "Hemming Fab Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_type",
+   "fieldtype": "Select",
+   "label": "Bottom Pannel Type",
+   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_gsm",
+   "fieldtype": "Int",
+   "label": "Bottom Pannel GSM"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_coated",
+   "fieldtype": "Int",
+   "label": "Bottom Pannel Coated"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_total",
+   "fieldtype": "Int",
+   "label": "Bottom Pannel Total"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_dia",
+   "fieldtype": "Int",
+   "label": "Bottom Pannel Dia"
+  },
+  {
+   "fieldname": "tp_bottom_pannel_height",
+   "fieldtype": "Int",
+   "label": "Bottom Pannel Height"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-13 12:05:04.513685",
+ "modified_by": "Administrator",
+ "module": "Bag WT UI",
+ "name": "Top Attachment Type",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
