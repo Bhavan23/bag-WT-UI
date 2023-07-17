@@ -3027,11 +3027,11 @@ function getHtml() {
 			float: left;
 		}
 	
-		@media (max-width: 100px) {
-			.left-side, .right-side {
-				float: none;
-			}
-		}
+		// @media (max-width: 100px) {
+		// 	.left-side, .right-side {
+		// 		float: none;
+		// 	}
+		// }
 	</style>
 	<div class= "col-xs-12">
 		<div class= "left-side" width= "100%">
