@@ -3022,19 +3022,8 @@ function tab_webbing_type() {
 
 function getHtml() {
 	let body = `
-	<style>
-		.left-side{
-			float: left;
-		}
-	
-		// @media (max-width: 100px) {
-		// 	.left-side, .right-side {
-		// 		float: none;
-		// 	}
-		// }
-	</style>
-	<div class= "col-xs-12">
-		<div class= "left-side" width= "100%">
+	<div class= "col-xs-12" width= "100%">
+		<div class= "col-xs-6" style= "float: left">
 			${tab_bag_size()}
 			${tab_linear_type()}
 			${tab_body_fabric()}
@@ -3044,7 +3033,7 @@ function getHtml() {
 			${left_attachment()}
 			
 		</div>
-		<div class= "left-side" width= "100%" style= "margin-left:20px">
+		<div class= "col-xs-6" style= "float: left">
 			<table style="margin-top:10px;" id="" width = 85%>
 				<tr>
 					<td style="border:1px solid black;width:120px">Bag Wt: </td>
