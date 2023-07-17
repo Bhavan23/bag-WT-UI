@@ -14,10 +14,10 @@
   "top_band_color",
   "top_band_size",
   "top_band_gsm",
-  "stevdor_type",
-  "stevdor_color",
-  "stevdor_size",
-  "stevdor_gsm",
+  "stevedor_type",
+  "stevedor_color",
+  "stevedor_size",
+  "stevedor_gsm",
   "sleeve_type",
   "sleeve_color",
   "sleeve_size",
@@ -74,28 +74,6 @@
    "label": "Top Band GSM"
   },
   {
-   "fieldname": "stevdor_type",
-   "fieldtype": "Select",
-   "label": "Stevdor Type",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "stevdor_color",
-   "fieldtype": "Select",
-   "label": "Stevdor Color",
-   "options": "White\nOrange"
-  },
-  {
-   "fieldname": "stevdor_size",
-   "fieldtype": "Int",
-   "label": "Stevdor Size"
-  },
-  {
-   "fieldname": "stevdor_gsm",
-   "fieldtype": "Int",
-   "label": "Stevdor GSM"
-  },
-  {
    "fieldname": "sleeve_type",
    "fieldtype": "Select",
    "label": "Sleeve Type",
@@ -145,12 +123,34 @@
    "fieldname": "felt_patch_gsm",
    "fieldtype": "Int",
    "label": "Felt Patch GSM"
+  },
+  {
+   "fieldname": "stevedor_type",
+   "fieldtype": "Select",
+   "label": "Stevedor Type",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "stevedor_color",
+   "fieldtype": "Select",
+   "label": "Stevedor Color",
+   "options": "White\nOrange"
+  },
+  {
+   "fieldname": "stevedor_size",
+   "fieldtype": "Int",
+   "label": "Stevedor Size"
+  },
+  {
+   "fieldname": "stevedor_gsm",
+   "fieldtype": "Int",
+   "label": "Stevedor GSM"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:03:38.085702",
+ "modified": "2023-07-14 11:02:14.266302",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Webbing Add Ons",

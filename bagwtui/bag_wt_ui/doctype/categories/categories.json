@@ -76,7 +76,8 @@
   {
    "fieldname": "felt_att",
    "fieldtype": "Select",
-   "label": "Felt Att"
+   "label": "Felt Att",
+   "options": "Yes\nNo"
   },
   {
    "fieldname": "felt_nos",
@@ -92,7 +93,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:04:00.484664",
+ "modified": "2023-07-17 11:32:37.916996",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Categories",

@@ -6,62 +6,18 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "st_bottom_flap",
-  "st_bottom_flap_type",
-  "st_bottom_flap_l",
-  "st_bottom_flap_w",
-  "st_bottom_flap_gsm",
-  "st_bottom_flap_coated",
-  "st_bottom_flap_total",
-  "st_bottom_flap_color",
+  "st_top_flap",
+  "st_top_flap_type",
+  "st_top_flap_l",
+  "st_top_flap_w",
+  "st_top_flap_gsm",
+  "st_top_flap_coated",
+  "st_top_flap_total",
+  "st_top_flap_color",
   "st_extra_l",
   "st_extra_w"
  ],
  "fields": [
-  {
-   "fieldname": "st_bottom_flap",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Bottom Flap",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "st_bottom_flap_type",
-   "fieldtype": "Select",
-   "label": "Bottom Flap Type",
-   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
-  },
-  {
-   "fieldname": "st_bottom_flap_l",
-   "fieldtype": "Int",
-   "label": "Bottom Flap L"
-  },
-  {
-   "fieldname": "st_bottom_flap_w",
-   "fieldtype": "Int",
-   "label": "Bottom Flap W"
-  },
-  {
-   "fieldname": "st_bottom_flap_gsm",
-   "fieldtype": "Int",
-   "label": "Bottom Flap GSM"
-  },
-  {
-   "fieldname": "st_bottom_flap_coated",
-   "fieldtype": "Int",
-   "label": "Bottom Flap Coated"
-  },
-  {
-   "fieldname": "st_bottom_flap_total",
-   "fieldtype": "Int",
-   "label": "Bottom Flap Total"
-  },
-  {
-   "fieldname": "st_bottom_flap_color",
-   "fieldtype": "Select",
-   "label": "Bottom Flap Color",
-   "options": "Orange\nWhite"
-  },
   {
    "fieldname": "st_extra_l",
    "fieldtype": "Int",
@@ -71,12 +27,56 @@
    "fieldname": "st_extra_w",
    "fieldtype": "Int",
    "label": "Extra W"
+  },
+  {
+   "fieldname": "st_top_flap",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Top Flap",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "st_top_flap_type",
+   "fieldtype": "Select",
+   "label": "Top Flap Type",
+   "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
+  },
+  {
+   "fieldname": "st_top_flap_l",
+   "fieldtype": "Int",
+   "label": "Top Flap L"
+  },
+  {
+   "fieldname": "st_top_flap_w",
+   "fieldtype": "Int",
+   "label": "Top Flap W"
+  },
+  {
+   "fieldname": "st_top_flap_gsm",
+   "fieldtype": "Int",
+   "label": "Top Flap GSM"
+  },
+  {
+   "fieldname": "st_top_flap_coated",
+   "fieldtype": "Int",
+   "label": "Top Flap Coated"
+  },
+  {
+   "fieldname": "st_top_flap_total",
+   "fieldtype": "Int",
+   "label": "Top Flap Total"
+  },
+  {
+   "fieldname": "st_top_flap_color",
+   "fieldtype": "Select",
+   "label": "Top Flap Color",
+   "options": "Orange\nWhite"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:05:39.026033",
+ "modified": "2023-07-14 11:37:58.276457",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Secondary Top",

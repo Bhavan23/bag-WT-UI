@@ -30,9 +30,10 @@
  "fields": [
   {
    "fieldname": "od_or_id",
-   "fieldtype": "Data",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "OD Or ID"
+   "label": "OD Or ID",
+   "options": "ID\nOD"
   },
   {
    "fieldname": "od_layers",
@@ -93,13 +94,13 @@
    "fieldname": "cross_corner_layers",
    "fieldtype": "Select",
    "label": "Cross Corner Layers",
-   "options": "\nYes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "butterfly_fold_layers",
    "fieldtype": "Select",
    "label": "Butterfly Fold Layers",
-   "options": "\nYes\nNo"
+   "options": "No\nYes"
   },
   {
    "fieldname": "butterfly_fold_h",
@@ -123,8 +124,9 @@
   },
   {
    "fieldname": "sf",
-   "fieldtype": "Data",
-   "label": "SF"
+   "fieldtype": "Select",
+   "label": "SF",
+   "options": "5:01"
   },
   {
    "fieldname": "swl",
@@ -135,7 +137,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 11:50:45.684495",
+ "modified": "2023-07-14 12:14:03.006988",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Bag Size",

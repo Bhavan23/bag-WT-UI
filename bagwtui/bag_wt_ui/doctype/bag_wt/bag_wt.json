@@ -7,8 +7,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "enq_no",
-  "enq_name",
+  "eng_no",
+  "eng_name",
   "bag_type",
   "bag_wt",
   "no_of_bags",
@@ -21,7 +21,7 @@
   "webbing_add_ons",
   "categories",
   "body_fabric",
-  "extras_dese",
+  "extras_desc",
   "accessories",
   "top_attachment_type",
   "bottom_attachment_type",
@@ -34,20 +34,10 @@
  ],
  "fields": [
   {
-   "fieldname": "enq_no",
-   "fieldtype": "Data",
-   "label": "Enq No"
-  },
-  {
-   "fieldname": "enq_name",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
    "fieldname": "bag_type",
    "fieldtype": "Select",
    "label": "Bag Type",
-   "options": "\nCircular\nU+2\n4 Panel"
+   "options": "U+2\n4 Panel\nCircular"
   },
   {
    "fieldname": "bag_wt",
@@ -112,12 +102,6 @@
    "options": "Body Fabric"
   },
   {
-   "fieldname": "extras_dese",
-   "fieldtype": "Table",
-   "label": "Extras Dese",
-   "options": "Extras Dese"
-  },
-  {
    "fieldname": "accessories",
    "fieldtype": "Table",
    "label": "Accessories",
@@ -170,11 +154,27 @@
    "fieldtype": "Table",
    "label": "Bottom Attachment Addons Type",
    "options": "Bottom Attachment Addons Type"
+  },
+  {
+   "fieldname": "eng_no",
+   "fieldtype": "Data",
+   "label": "Eng No"
+  },
+  {
+   "fieldname": "eng_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "extras_desc",
+   "fieldtype": "Table",
+   "label": "Extras Desc",
+   "options": "Extras Desc"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-13 11:17:32.075755",
+ "modified": "2023-07-17 11:21:40.452747",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Bag WT",

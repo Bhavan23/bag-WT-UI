@@ -9,7 +9,7 @@
  "field_order": [
   "bt_outer_tie",
   "bt_inner_tie_ds",
-  "bt_pattel_closure",
+  "bt_petal_closure",
   "bt_skirt_open_corner"
  ],
  "fields": [
@@ -27,22 +27,22 @@
    "options": "Yes\nNo"
   },
   {
-   "fieldname": "bt_pattel_closure",
-   "fieldtype": "Select",
-   "label": "Pattel Closure",
-   "options": "Yes\nNo"
-  },
-  {
    "fieldname": "bt_skirt_open_corner",
    "fieldtype": "Select",
    "label": "Skirt Open Corner",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "bt_petal_closure",
+   "fieldtype": "Select",
+   "label": "Petal Closure",
    "options": "Yes\nNo"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:07:00.166273",
+ "modified": "2023-07-14 11:45:53.777175",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Bottom Attachment Addons",

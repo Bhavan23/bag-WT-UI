@@ -13,9 +13,9 @@
   "tp_inner_tie_ds_width",
   "tp_inner_tie_ds_gsm",
   "tp_inner_tie_ds_color",
-  "tp_pattel_rope_width",
-  "tp_pattel_rope_gsm",
-  "tp_pattel_rope_color",
+  "tp_petal_rope_width",
+  "tp_petal_rope_gsm",
+  "tp_petal_rope_color",
   "tp_hose_pipe_width",
   "tp_hose_pipe_gsm",
   "tp_hose_pipe_color"
@@ -55,22 +55,6 @@
    "options": "White\nOrange"
   },
   {
-   "fieldname": "tp_pattel_rope_width",
-   "fieldtype": "Int",
-   "label": "Pattel Rope Width"
-  },
-  {
-   "fieldname": "tp_pattel_rope_gsm",
-   "fieldtype": "Int",
-   "label": "Pattel Rope GSM"
-  },
-  {
-   "fieldname": "tp_pattel_rope_color",
-   "fieldtype": "Select",
-   "label": "Pattel Rope Color",
-   "options": "White\nOrange"
-  },
-  {
    "fieldname": "tp_hose_pipe_width",
    "fieldtype": "Int",
    "label": "Hose Pipe Width"
@@ -85,12 +69,28 @@
    "fieldtype": "Select",
    "label": "Hose Pipe Color",
    "options": "White\nOrange"
+  },
+  {
+   "fieldname": "tp_petal_rope_width",
+   "fieldtype": "Int",
+   "label": "Petal Rope Width"
+  },
+  {
+   "fieldname": "tp_petal_rope_gsm",
+   "fieldtype": "Int",
+   "label": "Petal Rope GSM"
+  },
+  {
+   "fieldname": "tp_petal_rope_color",
+   "fieldtype": "Select",
+   "label": "Petal Rope Color",
+   "options": "White\nOrange"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:07:18.723921",
+ "modified": "2023-07-17 10:35:10.674185",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Top Attachment Addons Type",

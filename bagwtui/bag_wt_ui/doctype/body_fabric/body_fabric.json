@@ -30,13 +30,14 @@
   "body_attachment_coated",
   "body_attachment_total",
   "body_attachment_color",
-  "extra_bases_type",
-  "extra_bases_nos"
+  "extra_base_type",
+  "extra_base_nos"
  ],
  "fields": [
   {
    "fieldname": "fabric_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Fabric Type",
    "options": "PP Flat\nPP Circular\nSulzer\nVentilated\nNett Fabric"
   },
@@ -163,23 +164,21 @@
    "options": "White\nOrange"
   },
   {
-   "fieldname": "extra_bases_type",
+   "fieldname": "extra_base_type",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Extra Bases Type",
+   "label": "Extra Base Type",
    "options": "Nos"
   },
   {
-   "fieldname": "extra_bases_nos",
+   "fieldname": "extra_base_nos",
    "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Extra Bases Nos"
+   "label": "Extra Base Nos"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:04:17.515213",
+ "modified": "2023-07-17 10:59:45.941427",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Body Fabric",

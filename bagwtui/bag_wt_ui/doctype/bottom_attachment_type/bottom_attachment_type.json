@@ -30,12 +30,12 @@
   "bt_na_height",
   "bt_na_color",
   "bt_hemming_fab_type",
-  "bt_bottom_pannel_type",
-  "bt_bottom_pannel_gsm",
-  "bt_bottom_pannel_coated",
-  "bt_bottom_pannel_total",
-  "bt_bottom_pannel_dia",
-  "bt_bottom_pannel_height"
+  "bt_bottom_panel_type",
+  "bt_bottom_panel_gsm",
+  "bt_bottom_panel_coated",
+  "bt_bottom_panel_total",
+  "bt_bottom_panel_dia",
+  "bt_bottom_panel_height"
  ],
  "fields": [
   {
@@ -163,41 +163,41 @@
    "options": "Yes\nNo"
   },
   {
-   "fieldname": "bt_bottom_pannel_type",
+   "fieldname": "bt_bottom_panel_type",
    "fieldtype": "Select",
-   "label": "Bottom Pannel Type",
+   "label": "Bottom Panel Type",
    "options": "PP - Flat\nPP - Circular\nSulzer\nVentilated\nNett Fabric"
   },
   {
-   "fieldname": "bt_bottom_pannel_gsm",
+   "fieldname": "bt_bottom_panel_gsm",
    "fieldtype": "Int",
-   "label": "Bottom Pannel GSM"
+   "label": "Bottom Panel GSM"
   },
   {
-   "fieldname": "bt_bottom_pannel_coated",
+   "fieldname": "bt_bottom_panel_coated",
    "fieldtype": "Int",
-   "label": "Bottom Pannel Coated"
+   "label": "Bottom Panel Coated"
   },
   {
-   "fieldname": "bt_bottom_pannel_total",
+   "fieldname": "bt_bottom_panel_total",
    "fieldtype": "Int",
-   "label": "Bottom Pannel Total"
+   "label": "Bottom Panel Total"
   },
   {
-   "fieldname": "bt_bottom_pannel_dia",
+   "fieldname": "bt_bottom_panel_dia",
    "fieldtype": "Int",
-   "label": "Bottom Pannel Dia"
+   "label": "Bottom Panel Dia"
   },
   {
-   "fieldname": "bt_bottom_pannel_height",
+   "fieldname": "bt_bottom_panel_height",
    "fieldtype": "Int",
-   "label": "Bottom Pannel Height"
+   "label": "Bottom Panel Height"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:05:22.067056",
+ "modified": "2023-07-14 11:11:28.112542",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Bottom Attachment Type",

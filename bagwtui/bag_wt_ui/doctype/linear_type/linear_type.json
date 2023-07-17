@@ -13,8 +13,8 @@
   "normal_excess_ht",
   "normal_excess_wd",
   "normal_gluing",
-  "normal_tabling",
-  "normal_tabling_nos",
+  "normal_tabbing",
+  "normal_tabbing_nos",
   "normal_color"
  ],
  "fields": [
@@ -58,27 +58,27 @@
    "options": "Yes\nNo"
   },
   {
-   "fieldname": "normal_tabling",
-   "fieldtype": "Select",
-   "label": "Normal Tabling",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "normal_tabling_nos",
-   "fieldtype": "Int",
-   "label": "Normal Tabling Nos"
-  },
-  {
    "fieldname": "normal_color",
    "fieldtype": "Select",
    "label": "Normal Color",
    "options": "Natural"
+  },
+  {
+   "fieldname": "normal_tabbing",
+   "fieldtype": "Select",
+   "label": "Normal Tabbing",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "normal_tabbing_nos",
+   "fieldtype": "Int",
+   "label": "Normal Tabbing Nos"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-07-13 12:02:15.598725",
+ "modified": "2023-07-14 10:27:34.748068",
  "modified_by": "Administrator",
  "module": "Bag WT UI",
  "name": "Linear Type",

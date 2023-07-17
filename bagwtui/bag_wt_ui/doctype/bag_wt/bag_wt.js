@@ -30,9 +30,9 @@ frappe.ui.form.on('Bag WT', {
 			cur_frm.add_child("categories")
 			cur_frm.refresh_fields("categories")
 		}
-		if (!frm.doc.extras_dese) {
-			cur_frm.add_child("extras_dese")
-			cur_frm.refresh_fields("extras_dese")
+		if (!frm.doc.extras_desc) {
+			cur_frm.add_child("extras_desc")
+			cur_frm.refresh_fields("extras_desc")
 		}
 		if (!frm.doc.body_fabric) {
 			cur_frm.add_child("body_fabric")
@@ -89,10 +89,10 @@ frappe.ui.form.on('Bag WT', {
 		cur_frm.trigger("add_row")
 	},
 	before_save: async function (frm) {
-		let enq_no = document.getElementById("enq_no").value
-		cur_frm.set_value("enq_no", enq_no)
-		let enq_name = document.getElementById("enq_name").value
-		cur_frm.set_value("enq_name", enq_name)
+		let eng_no = document.getElementById("eng_no").value
+		cur_frm.set_value("eng_no", eng_no)
+		let eng_name = document.getElementById("eng_name").value
+		cur_frm.set_value("eng_name", eng_name)
 		let bag_type = document.getElementById("bag_type").value
 		cur_frm.set_value("bag_type", bag_type)
 
@@ -138,15 +138,15 @@ frappe.ui.form.on('Bag WT', {
 
 		await set_categories_values(frm)
 
-		await set_extras_dese_values(frm)
+		await set_extras_desc_values(frm)
 
 		cur_frm.dirty()
 	},
 	render_values: async function (frm) {
-		var enq_no = document.getElementById("enq_no")
-		enq_no.value = cur_frm.doc.enq_no || ""
-		var enq_name = document.getElementById("enq_name")
-		enq_name.value = cur_frm.doc.enq_name || ""
+		var eng_no = document.getElementById("eng_no")
+		eng_no.value = cur_frm.doc.eng_no || ""
+		var eng_name = document.getElementById("eng_name")
+		eng_name.value = cur_frm.doc.eng_name || ""
 		var bag_type = document.getElementById("bag_type")
 		bag_type.value = cur_frm.doc.bag_type || "Circular"
 
@@ -192,114 +192,114 @@ frappe.ui.form.on('Bag WT', {
 
 		await get_categories_values()
 
-		await get_extras_dese_values()
+		await get_extras_desc_values()
 	},
 });
 
-function get_extras_dese_values() {
+function get_extras_desc_values() {
 	var yarn = document.getElementById("yarn")
-	yarn.value = cur_frm.doc.extras_dese[0].yarn || ""
+	yarn.value = cur_frm.doc.extras_desc[0].yarn || ""
 	var yarn_yes_no = document.getElementById("yarn_yes_no")
-	yarn_yes_no.value = cur_frm.doc.extras_dese[0].yarn_yes_no
+	yarn_yes_no.value = cur_frm.doc.extras_desc[0].yarn_yes_no
 	var yarn_denier = document.getElementById("yarn_denier")
-	yarn_denier.value = cur_frm.doc.extras_dese[0].yarn_denier
+	yarn_denier.value = cur_frm.doc.extras_desc[0].yarn_denier
 	var yarn_grams1 = document.getElementById("yarn_grams1")
-	yarn_grams1.value = cur_frm.doc.extras_dese[0].yarn_grams1 || ""
+	yarn_grams1.value = cur_frm.doc.extras_desc[0].yarn_grams1 || ""
 	var yarn_grams2 = document.getElementById("yarn_grams2")
-	yarn_grams2.value = cur_frm.doc.extras_dese[0].yarn_grams2 || ""
+	yarn_grams2.value = cur_frm.doc.extras_desc[0].yarn_grams2 || ""
 
 	var b_lock = document.getElementById("b_lock")
-	b_lock.value = cur_frm.doc.extras_dese[0].b_lock
+	b_lock.value = cur_frm.doc.extras_desc[0].b_lock || ""
 	var b_lock_yes_no = document.getElementById("b_lock_yes_no")
-	b_lock_yes_no.value = cur_frm.doc.extras_dese[0].b_lock_yes_no || ""
+	b_lock_yes_no.value = cur_frm.doc.extras_desc[0].b_lock_yes_no 
 	var b_lock_grams1 = document.getElementById("b_lock_grams1")
-	b_lock_grams1.value = cur_frm.doc.extras_dese[0].b_lock_grams1 || ""
+	b_lock_grams1.value = cur_frm.doc.extras_desc[0].b_lock_grams1 || ""
 
 	var extra1_no = document.getElementById("extra1_no")
-	extra1_no.value = cur_frm.doc.extras_dese[0].extra1_no || ""
+	extra1_no.value = cur_frm.doc.extras_desc[0].extra1_no || ""
 	var extra1_width = document.getElementById("extra1_width")
-	extra1_width.value = cur_frm.doc.extras_dese[0].extra1_width || ""
+	extra1_width.value = cur_frm.doc.extras_desc[0].extra1_width || ""
 	var extra1_gsm = document.getElementById("extra1_gsm")
-	extra1_gsm.value = cur_frm.doc.extras_dese[0].extra1_gsm || ""
+	extra1_gsm.value = cur_frm.doc.extras_desc[0].extra1_gsm || ""
 	var extra1_cut_length = document.getElementById("extra1_cut_length")
-	extra1_cut_length.value = cur_frm.doc.extras_dese[0].extra1_cut_length || ""
+	extra1_cut_length.value = cur_frm.doc.extras_desc[0].extra1_cut_length || ""
 	var extra1_weight = document.getElementById("extra1_weight")
-	extra1_weight.value = cur_frm.doc.extras_dese[0].extra1_weight || ""
+	extra1_weight.value = cur_frm.doc.extras_desc[0].extra1_weight || ""
 
 	var extra2_no = document.getElementById("extra2_no")
-	extra2_no.value = cur_frm.doc.extras_dese[0].extra2_no || ""
+	extra2_no.value = cur_frm.doc.extras_desc[0].extra2_no || ""
 	var extra2_width = document.getElementById("extra2_width")
-	extra2_width.value = cur_frm.doc.extras_dese[0].extra2_width || ""
+	extra2_width.value = cur_frm.doc.extras_desc[0].extra2_width || ""
 	var extra2_gsm = document.getElementById("extra2_gsm")
-	extra2_gsm.value = cur_frm.doc.extras_dese[0].extra2_gsm || ""
+	extra2_gsm.value = cur_frm.doc.extras_desc[0].extra2_gsm || ""
 	var extra2_cut_length = document.getElementById("extra2_cut_length")
-	extra2_cut_length.value = cur_frm.doc.extras_dese[0].extra2_cut_length || ""
+	extra2_cut_length.value = cur_frm.doc.extras_desc[0].extra2_cut_length || ""
 	var extra2_weight = document.getElementById("extra2_weight")
-	extra2_weight.value = cur_frm.doc.extras_dese[0].extra2_weight || ""
+	extra2_weight.value = cur_frm.doc.extras_desc[0].extra2_weight || ""
 
 	var extra3_no = document.getElementById("extra3_no")
-	extra3_no.value = cur_frm.doc.extras_dese[0].extra3_no || ""
+	extra3_no.value = cur_frm.doc.extras_desc[0].extra3_no || ""
 	var extra3_width = document.getElementById("extra3_width")
-	extra3_width.value = cur_frm.doc.extras_dese[0].extra3_width || ""
+	extra3_width.value = cur_frm.doc.extras_desc[0].extra3_width || ""
 	var extra3_gsm = document.getElementById("extra3_gsm")
-	extra3_gsm.value = cur_frm.doc.extras_dese[0].extra3_gsm || ""
+	extra3_gsm.value = cur_frm.doc.extras_desc[0].extra3_gsm || ""
 	var extra3_cut_length = document.getElementById("extra3_cut_length")
-	extra3_cut_length.value = cur_frm.doc.extras_dese[0].extra3_cut_length || ""
+	extra3_cut_length.value = cur_frm.doc.extras_desc[0].extra3_cut_length || ""
 	var extra3_weight = document.getElementById("extra3_weight")
-	extra3_weight.value = cur_frm.doc.extras_dese[0].extra3_weight || ""
+	extra3_weight.value = cur_frm.doc.extras_desc[0].extra3_weight || ""
 }
 
-function set_extras_dese_values(frm) {
+function set_extras_desc_values(frm) {
 	var yarn = document.getElementById("yarn").value
-	cur_frm.doc.extras_dese[0].yarn = yarn
+	cur_frm.doc.extras_desc[0].yarn = yarn
 	var yarn_yes_no = document.getElementById("yarn_yes_no").value
-	cur_frm.doc.extras_dese[0].yarn_yes_no = yarn_yes_no
+	cur_frm.doc.extras_desc[0].yarn_yes_no = yarn_yes_no
 	var yarn_denier = document.getElementById("yarn_denier").value
-	cur_frm.doc.extras_dese[0].yarn_denier = yarn_denier
+	cur_frm.doc.extras_desc[0].yarn_denier = yarn_denier
 	var yarn_grams1 = document.getElementById("yarn_grams1").value
-	cur_frm.doc.extras_dese[0].yarn_grams1 = yarn_grams1
+	cur_frm.doc.extras_desc[0].yarn_grams1 = yarn_grams1
 	var yarn_grams2 = document.getElementById("yarn_grams2").value
-	cur_frm.doc.extras_dese[0].yarn_grams2 = yarn_grams2
+	cur_frm.doc.extras_desc[0].yarn_grams2 = yarn_grams2
 
 	var b_lock = document.getElementById("b_lock").value
-	cur_frm.doc.extras_dese[0].b_lock = b_lock
+	cur_frm.doc.extras_desc[0].b_lock = b_lock
 	var b_lock_yes_no = document.getElementById("b_lock_yes_no").value
-	cur_frm.doc.extras_dese[0].b_lock_yes_no = b_lock_yes_no
+	cur_frm.doc.extras_desc[0].b_lock_yes_no = b_lock_yes_no
 	var b_lock_grams1 = document.getElementById("b_lock_grams1").value
-	cur_frm.doc.extras_dese[0].b_lock_grams1 = b_lock_grams1
+	cur_frm.doc.extras_desc[0].b_lock_grams1 = b_lock_grams1
 
 	var extra1_no = document.getElementById("extra1_no").value
-	cur_frm.doc.extras_dese[0].extra1_no = extra1_no
+	cur_frm.doc.extras_desc[0].extra1_no = extra1_no
 	var extra1_width = document.getElementById("extra1_width").value
-	cur_frm.doc.extras_dese[0].extra1_width = extra1_width
+	cur_frm.doc.extras_desc[0].extra1_width = extra1_width
 	var extra1_gsm = document.getElementById("extra1_gsm").value
-	cur_frm.doc.extras_dese[0].extra1_gsm = extra1_gsm
+	cur_frm.doc.extras_desc[0].extra1_gsm = extra1_gsm
 	var extra1_cut_length = document.getElementById("extra1_cut_length").value
-	cur_frm.doc.extras_dese[0].extra1_cut_length = extra1_cut_length
+	cur_frm.doc.extras_desc[0].extra1_cut_length = extra1_cut_length
 	var extra1_weight = document.getElementById("extra1_weight").value
-	cur_frm.doc.extras_dese[0].extra1_weight = extra1_weight
+	cur_frm.doc.extras_desc[0].extra1_weight = extra1_weight
 
 	var extra2_no = document.getElementById("extra2_no").value
-	cur_frm.doc.extras_dese[0].extra2_no = extra2_no
+	cur_frm.doc.extras_desc[0].extra2_no = extra2_no
 	var extra2_width = document.getElementById("extra2_width").value
-	cur_frm.doc.extras_dese[0].extra2_width = extra2_width
+	cur_frm.doc.extras_desc[0].extra2_width = extra2_width
 	var extra2_gsm = document.getElementById("extra2_gsm").value
-	cur_frm.doc.extras_dese[0].extra2_gsm = extra2_gsm
+	cur_frm.doc.extras_desc[0].extra2_gsm = extra2_gsm
 	var extra2_cut_length = document.getElementById("extra2_cut_length").value
-	cur_frm.doc.extras_dese[0].extra2_cut_length = extra2_cut_length
+	cur_frm.doc.extras_desc[0].extra2_cut_length = extra2_cut_length
 	var extra2_weight = document.getElementById("extra2_weight").value
-	cur_frm.doc.extras_dese[0].extra2_weight = extra2_weight
+	cur_frm.doc.extras_desc[0].extra2_weight = extra2_weight
 
 	var extra3_no = document.getElementById("extra3_no").value
-	cur_frm.doc.extras_dese[0].extra3_no = extra3_no
+	cur_frm.doc.extras_desc[0].extra3_no = extra3_no
 	var extra3_width = document.getElementById("extra3_width").value
-	cur_frm.doc.extras_dese[0].extra3_width = extra3_width
+	cur_frm.doc.extras_desc[0].extra3_width = extra3_width
 	var extra3_gsm = document.getElementById("extra3_gsm").value
-	cur_frm.doc.extras_dese[0].extra3_gsm = extra3_gsm
+	cur_frm.doc.extras_desc[0].extra3_gsm = extra3_gsm
 	var extra3_cut_length = document.getElementById("extra3_cut_length").value
-	cur_frm.doc.extras_dese[0].extra3_cut_length = extra3_cut_length
+	cur_frm.doc.extras_desc[0].extra3_cut_length = extra3_cut_length
 	var extra3_weight = document.getElementById("extra3_weight").value
-	cur_frm.doc.extras_dese[0].extra3_weight = extra3_weight
+	cur_frm.doc.extras_desc[0].extra3_weight = extra3_weight
 
 }
 
@@ -372,12 +372,12 @@ function get_top_attachment_addons_type_values() {
 	tp_inner_tie_ds_gsm.value = cur_frm.doc.top_attachment_addons_type[0].tp_inner_tie_ds_gsm
 	var tp_inner_tie_ds_color = document.getElementById("tp_inner_tie_ds_color")
 	tp_inner_tie_ds_color.value = cur_frm.doc.top_attachment_addons_type[0].tp_inner_tie_ds_color
-	var tp_pattel_rope_width = document.getElementById("tp_pattel_rope_width")
-	tp_pattel_rope_width.value = cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_width
-	var tp_pattel_rope_gsm = document.getElementById("tp_pattel_rope_gsm")
-	tp_pattel_rope_gsm.value = cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_gsm
-	var tp_pattel_rope_color = document.getElementById("tp_pattel_rope_color")
-	tp_pattel_rope_color.value = cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_color
+	var tp_petal_rope_width = document.getElementById("tp_petal_rope_width")
+	tp_petal_rope_width.value = cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_width
+	var tp_petal_rope_gsm = document.getElementById("tp_petal_rope_gsm")
+	tp_petal_rope_gsm.value = cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_gsm
+	var tp_petal_rope_color = document.getElementById("tp_petal_rope_color")
+	tp_petal_rope_color.value = cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_color
 	var tp_hose_pipe_width = document.getElementById("tp_hose_pipe_width")
 	tp_hose_pipe_width.value = cur_frm.doc.top_attachment_addons_type[0].tp_hose_pipe_width
 	var tp_hose_pipe_gsm = document.getElementById("tp_hose_pipe_gsm")
@@ -399,12 +399,12 @@ function set_top_attachment_addons_type_values(frm) {
 	cur_frm.doc.top_attachment_addons_type[0].tp_inner_tie_ds_gsm = tp_inner_tie_ds_gsm
 	var tp_inner_tie_ds_color = document.getElementById("tp_inner_tie_ds_color").value
 	cur_frm.doc.top_attachment_addons_type[0].tp_inner_tie_ds_color = tp_inner_tie_ds_color
-	var tp_pattel_rope_width = document.getElementById("tp_pattel_rope_width").value
-	cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_width = tp_pattel_rope_width
-	var tp_pattel_rope_gsm = document.getElementById("tp_pattel_rope_gsm").value
-	cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_gsm = tp_pattel_rope_gsm
-	var tp_pattel_rope_color = document.getElementById("tp_pattel_rope_color").value
-	cur_frm.doc.top_attachment_addons_type[0].tp_pattel_rope_color = tp_pattel_rope_color
+	var tp_petal_rope_width = document.getElementById("tp_petal_rope_width").value
+	cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_width = tp_petal_rope_width
+	var tp_petal_rope_gsm = document.getElementById("tp_petal_rope_gsm").value
+	cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_gsm = tp_petal_rope_gsm
+	var tp_petal_rope_color = document.getElementById("tp_petal_rope_color").value
+	cur_frm.doc.top_attachment_addons_type[0].tp_petal_rope_color = tp_petal_rope_color
 	var tp_hose_pipe_width = document.getElementById("tp_hose_pipe_width").value
 	cur_frm.doc.top_attachment_addons_type[0].tp_hose_pipe_width = tp_hose_pipe_width
 	var tp_hose_pipe_gsm = document.getElementById("tp_hose_pipe_gsm").value
@@ -426,12 +426,12 @@ function get_bottom_attachment_addons_type_values() {
 	bt_inner_tie_ds_gsm.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_inner_tie_ds_gsm
 	var bt_inner_tie_ds_color = document.getElementById("bt_inner_tie_ds_color")
 	bt_inner_tie_ds_color.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_inner_tie_ds_color
-	var bt_pattel_rope_width = document.getElementById("bt_pattel_rope_width")
-	bt_pattel_rope_width.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_width
-	var bt_pattel_rope_gsm = document.getElementById("bt_pattel_rope_gsm")
-	bt_pattel_rope_gsm.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_gsm
-	var bt_pattel_rope_color = document.getElementById("bt_pattel_rope_color")
-	bt_pattel_rope_color.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_color
+	var bt_petal_rope_width = document.getElementById("bt_petal_rope_width")
+	bt_petal_rope_width.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_width
+	var bt_petal_rope_gsm = document.getElementById("bt_petal_rope_gsm")
+	bt_petal_rope_gsm.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_gsm
+	var bt_petal_rope_color = document.getElementById("bt_petal_rope_color")
+	bt_petal_rope_color.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_color
 	var bt_hose_pipe_width = document.getElementById("bt_hose_pipe_width")
 	bt_hose_pipe_width.value = cur_frm.doc.bottom_attachment_addons_type[0].bt_hose_pipe_width
 	var bt_hose_pipe_gsm = document.getElementById("bt_hose_pipe_gsm")
@@ -453,12 +453,12 @@ function set_bottom_attachment_addons_type_values(frm) {
 	cur_frm.doc.bottom_attachment_addons_type[0].bt_inner_tie_ds_gsm = bt_inner_tie_ds_gsm
 	var bt_inner_tie_ds_color = document.getElementById("bt_inner_tie_ds_color").value
 	cur_frm.doc.bottom_attachment_addons_type[0].bt_inner_tie_ds_color = bt_inner_tie_ds_color
-	var bt_pattel_rope_width = document.getElementById("bt_pattel_rope_width").value
-	cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_width = bt_pattel_rope_width
-	var bt_pattel_rope_gsm = document.getElementById("bt_pattel_rope_gsm").value
-	cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_gsm = bt_pattel_rope_gsm
-	var bt_pattel_rope_color = document.getElementById("bt_pattel_rope_color").value
-	cur_frm.doc.bottom_attachment_addons_type[0].bt_pattel_rope_color = bt_pattel_rope_color
+	var bt_petal_rope_width = document.getElementById("bt_petal_rope_width").value
+	cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_width = bt_petal_rope_width
+	var bt_petal_rope_gsm = document.getElementById("bt_petal_rope_gsm").value
+	cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_gsm = bt_petal_rope_gsm
+	var bt_petal_rope_color = document.getElementById("bt_petal_rope_color").value
+	cur_frm.doc.bottom_attachment_addons_type[0].bt_petal_rope_color = bt_petal_rope_color
 	var bt_hose_pipe_width = document.getElementById("bt_hose_pipe_width").value
 	cur_frm.doc.bottom_attachment_addons_type[0].bt_hose_pipe_width = bt_hose_pipe_width
 	var bt_hose_pipe_gsm = document.getElementById("bt_hose_pipe_gsm").value
@@ -472,8 +472,8 @@ function get_top_attachment_addons_values() {
 	tp_outer_tie.value = cur_frm.doc.top_attachment_addons[0].tp_outer_tie
 	var tp_inner_tie_ds = document.getElementById("tp_inner_tie_ds")
 	tp_inner_tie_ds.value = cur_frm.doc.top_attachment_addons[0].tp_inner_tie_ds
-	var tp_pattel_closure = document.getElementById("tp_pattel_closure")
-	tp_pattel_closure.value = cur_frm.doc.top_attachment_addons[0].tp_pattel_closure
+	var tp_petal_closure = document.getElementById("tp_petal_closure")
+	tp_petal_closure.value = cur_frm.doc.top_attachment_addons[0].tp_petal_closure
 	var tp_skirt_open_corner = document.getElementById("tp_skirt_open_corner")
 	tp_skirt_open_corner.value = cur_frm.doc.top_attachment_addons[0].tp_skirt_open_corner
 }
@@ -483,8 +483,8 @@ function set_top_attachment_addons_values(frm) {
 	cur_frm.doc.top_attachment_addons[0].tp_outer_tie = tp_outer_tie
 	var tp_inner_tie_ds = document.getElementById("tp_inner_tie_ds").value
 	cur_frm.doc.top_attachment_addons[0].tp_inner_tie_ds = tp_inner_tie_ds
-	var tp_pattel_closure = document.getElementById("tp_pattel_closure").value
-	cur_frm.doc.top_attachment_addons[0].tp_pattel_closure = tp_pattel_closure
+	var tp_petal_closure = document.getElementById("tp_petal_closure").value
+	cur_frm.doc.top_attachment_addons[0].tp_petal_closure = tp_petal_closure
 	var tp_skirt_open_corner = document.getElementById("tp_skirt_open_corner").value
 	cur_frm.doc.top_attachment_addons[0].tp_skirt_open_corner = tp_skirt_open_corner
 }
@@ -494,8 +494,8 @@ function get_bottom_attachment_addons_values() {
 	bt_outer_tie.value = cur_frm.doc.bottom_attachment_addons[0].bt_outer_tie
 	var bt_inner_tie_ds = document.getElementById("bt_inner_tie_ds")
 	bt_inner_tie_ds.value = cur_frm.doc.bottom_attachment_addons[0].bt_inner_tie_ds
-	var bt_pattel_closure = document.getElementById("bt_pattel_closure")
-	bt_pattel_closure.value = cur_frm.doc.bottom_attachment_addons[0].bt_pattel_closure
+	var bt_petal_closure = document.getElementById("bt_petal_closure")
+	bt_petal_closure.value = cur_frm.doc.bottom_attachment_addons[0].bt_petal_closure
 	var bt_skirt_open_corner = document.getElementById("bt_skirt_open_corner")
 	bt_skirt_open_corner.value = cur_frm.doc.bottom_attachment_addons[0].bt_skirt_open_corner
 }
@@ -505,29 +505,29 @@ function set_bottom_attachment_addons_values(frm) {
 	cur_frm.doc.bottom_attachment_addons[0].bt_outer_tie = bt_outer_tie
 	var bt_inner_tie_ds = document.getElementById("bt_inner_tie_ds").value
 	cur_frm.doc.bottom_attachment_addons[0].bt_inner_tie_ds = bt_inner_tie_ds
-	var bt_pattel_closure = document.getElementById("bt_pattel_closure").value
-	cur_frm.doc.bottom_attachment_addons[0].bt_pattel_closure = bt_pattel_closure
+	var bt_petal_closure = document.getElementById("bt_petal_closure").value
+	cur_frm.doc.bottom_attachment_addons[0].bt_petal_closure = bt_petal_closure
 	var bt_skirt_open_corner = document.getElementById("bt_skirt_open_corner").value
 	cur_frm.doc.bottom_attachment_addons[0].bt_skirt_open_corner = bt_skirt_open_corner
 }
 
 function get_secondary_top_values() {
-	var st_bottom_flap = document.getElementById("st_bottom_flap")
-	st_bottom_flap.value = cur_frm.doc.secondary_top[0].st_bottom_flap
-	var st_bottom_flap_type = document.getElementById("st_bottom_flap_type")
-	st_bottom_flap_type.value = cur_frm.doc.secondary_top[0].st_bottom_flap_type
-	var st_bottom_flap_l = document.getElementById("st_bottom_flap_l")
-	st_bottom_flap_l.value = cur_frm.doc.secondary_top[0].st_bottom_flap_l
-	var st_bottom_flap_w = document.getElementById("st_bottom_flap_w")
-	st_bottom_flap_w.value = cur_frm.doc.secondary_top[0].st_bottom_flap_w
-	var st_bottom_flap_gsm = document.getElementById("st_bottom_flap_gsm")
-	st_bottom_flap_gsm.value = cur_frm.doc.secondary_top[0].st_bottom_flap_gsm
-	var st_bottom_flap_coated = document.getElementById("st_bottom_flap_coated")
-	st_bottom_flap_coated.value = cur_frm.doc.secondary_top[0].st_bottom_flap_coated
-	var st_bottom_flap_total = document.getElementById("st_bottom_flap_total")
-	st_bottom_flap_total.value = cur_frm.doc.secondary_top[0].st_bottom_flap_total
-	var st_bottom_flap_color = document.getElementById("st_bottom_flap_color")
-	st_bottom_flap_color.value = cur_frm.doc.secondary_top[0].st_bottom_flap_color
+	var st_top_flap = document.getElementById("st_top_flap")
+	st_top_flap.value = cur_frm.doc.secondary_top[0].st_top_flap
+	var st_top_flap_type = document.getElementById("st_top_flap_type")
+	st_top_flap_type.value = cur_frm.doc.secondary_top[0].st_top_flap_type
+	var st_top_flap_l = document.getElementById("st_top_flap_l")
+	st_top_flap_l.value = cur_frm.doc.secondary_top[0].st_top_flap_l
+	var st_top_flap_w = document.getElementById("st_top_flap_w")
+	st_top_flap_w.value = cur_frm.doc.secondary_top[0].st_top_flap_w
+	var st_top_flap_gsm = document.getElementById("st_top_flap_gsm")
+	st_top_flap_gsm.value = cur_frm.doc.secondary_top[0].st_top_flap_gsm
+	var st_top_flap_coated = document.getElementById("st_top_flap_coated")
+	st_top_flap_coated.value = cur_frm.doc.secondary_top[0].st_top_flap_coated
+	var st_top_flap_total = document.getElementById("st_top_flap_total")
+	st_top_flap_total.value = cur_frm.doc.secondary_top[0].st_top_flap_total
+	var st_top_flap_color = document.getElementById("st_top_flap_color")
+	st_top_flap_color.value = cur_frm.doc.secondary_top[0].st_top_flap_color
 	var st_extra_l = document.getElementById("st_extra_l")
 	st_extra_l.value = cur_frm.doc.secondary_top[0].st_extra_l
 	var st_extra_w = document.getElementById("st_extra_w")
@@ -535,22 +535,22 @@ function get_secondary_top_values() {
 }
 
 function set_secondary_top_values(frm) {
-	var st_bottom_flap = document.getElementById("st_bottom_flap").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap = st_bottom_flap
-	var st_bottom_flap_type = document.getElementById("st_bottom_flap_type").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_type = st_bottom_flap_type
-	var st_bottom_flap_l = document.getElementById("st_bottom_flap_l").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_l = st_bottom_flap_l
-	var st_bottom_flap_w = document.getElementById("st_bottom_flap_w").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_w = st_bottom_flap_w
-	var st_bottom_flap_gsm = document.getElementById("st_bottom_flap_gsm").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_gsm = st_bottom_flap_gsm
-	var st_bottom_flap_coated = document.getElementById("st_bottom_flap_coated").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_coated = st_bottom_flap_coated
-	var st_bottom_flap_total = document.getElementById("st_bottom_flap_total").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_total = st_bottom_flap_total
-	var st_bottom_flap_color = document.getElementById("st_bottom_flap_color").value
-	cur_frm.doc.secondary_top[0].st_bottom_flap_color = st_bottom_flap_color
+	var st_top_flap = document.getElementById("st_top_flap").value
+	cur_frm.doc.secondary_top[0].st_top_flap = st_top_flap
+	var st_top_flap_type = document.getElementById("st_top_flap_type").value
+	cur_frm.doc.secondary_top[0].st_top_flap_type = st_top_flap_type
+	var st_top_flap_l = document.getElementById("st_top_flap_l").value
+	cur_frm.doc.secondary_top[0].st_top_flap_l = st_top_flap_l
+	var st_top_flap_w = document.getElementById("st_top_flap_w").value
+	cur_frm.doc.secondary_top[0].st_top_flap_w = st_top_flap_w
+	var st_top_flap_gsm = document.getElementById("st_top_flap_gsm").value
+	cur_frm.doc.secondary_top[0].st_top_flap_gsm = st_top_flap_gsm
+	var st_top_flap_coated = document.getElementById("st_top_flap_coated").value
+	cur_frm.doc.secondary_top[0].st_top_flap_coated = st_top_flap_coated
+	var st_top_flap_total = document.getElementById("st_top_flap_total").value
+	cur_frm.doc.secondary_top[0].st_top_flap_total = st_top_flap_total
+	var st_top_flap_color = document.getElementById("st_top_flap_color").value
+	cur_frm.doc.secondary_top[0].st_top_flap_color = st_top_flap_color
 	var st_extra_l = document.getElementById("st_extra_l").value
 	cur_frm.doc.secondary_top[0].st_extra_l = st_extra_l
 	var st_extra_w = document.getElementById("st_extra_w").value
@@ -659,18 +659,18 @@ function get_bottom_attachment_type_values() {
 	var bt_hemming_fab_type = document.getElementById("bt_hemming_fab_type")
 	bt_hemming_fab_type.value = cur_frm.doc.bottom_attachment_type[0].bt_hemming_fab_type
 
-	var bt_bottom_pannel_type = document.getElementById("bt_bottom_pannel_type")
-	bt_bottom_pannel_type.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_type
-	var bt_bottom_pannel_gsm = document.getElementById("bt_bottom_pannel_gsm")
-	bt_bottom_pannel_gsm.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_gsm
-	var bt_bottom_pannel_coated = document.getElementById("bt_bottom_pannel_coated")
-	bt_bottom_pannel_coated.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_coated
-	var bt_bottom_pannel_total = document.getElementById("bt_bottom_pannel_total")
-	bt_bottom_pannel_total.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_total
-	var bt_bottom_pannel_dia = document.getElementById("bt_bottom_pannel_dia")
-	bt_bottom_pannel_dia.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_dia
-	var bt_bottom_pannel_height = document.getElementById("bt_bottom_pannel_height")
-	bt_bottom_pannel_height.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_height
+	var bt_bottom_panel_type = document.getElementById("bt_bottom_panel_type")
+	bt_bottom_panel_type.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_type
+	var bt_bottom_panel_gsm = document.getElementById("bt_bottom_panel_gsm")
+	bt_bottom_panel_gsm.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_gsm
+	var bt_bottom_panel_coated = document.getElementById("bt_bottom_panel_coated")
+	bt_bottom_panel_coated.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_coated
+	var bt_bottom_panel_total = document.getElementById("bt_bottom_panel_total")
+	bt_bottom_panel_total.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_total
+	var bt_bottom_panel_dia = document.getElementById("bt_bottom_panel_dia")
+	bt_bottom_panel_dia.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_dia
+	var bt_bottom_panel_height = document.getElementById("bt_bottom_panel_height")
+	bt_bottom_panel_height.value = cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_height
 }
 
 function set_bottom_attachment_type_values(frm) {
@@ -729,18 +729,18 @@ function set_bottom_attachment_type_values(frm) {
 	var bt_hemming_fab_type = document.getElementById("bt_hemming_fab_type").value
 	cur_frm.doc.bottom_attachment_type[0].bt_hemming_fab_type = bt_hemming_fab_type
 
-	var bt_bottom_pannel_type = document.getElementById("bt_bottom_pannel_type").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_type = bt_bottom_pannel_type
-	var bt_bottom_pannel_gsm = document.getElementById("bt_bottom_pannel_gsm").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_gsm = bt_bottom_pannel_gsm
-	var bt_bottom_pannel_coated = document.getElementById("bt_bottom_pannel_coated").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_coated = bt_bottom_pannel_coated
-	var bt_bottom_pannel_total = document.getElementById("bt_bottom_pannel_total").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_total = bt_bottom_pannel_total
-	var bt_bottom_pannel_dia = document.getElementById("bt_bottom_pannel_dia").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_dia = bt_bottom_pannel_dia
-	var bt_bottom_pannel_height = document.getElementById("bt_bottom_pannel_height").value
-	cur_frm.doc.bottom_attachment_type[0].bt_bottom_pannel_height = bt_bottom_pannel_height
+	var bt_bottom_panel_type = document.getElementById("bt_bottom_panel_type").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_type = bt_bottom_panel_type
+	var bt_bottom_panel_gsm = document.getElementById("bt_bottom_panel_gsm").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_gsm = bt_bottom_panel_gsm
+	var bt_bottom_panel_coated = document.getElementById("bt_bottom_panel_coated").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_coated = bt_bottom_panel_coated
+	var bt_bottom_panel_total = document.getElementById("bt_bottom_panel_total").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_total = bt_bottom_panel_total
+	var bt_bottom_panel_dia = document.getElementById("bt_bottom_panel_dia").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_dia = bt_bottom_panel_dia
+	var bt_bottom_panel_height = document.getElementById("bt_bottom_panel_height").value
+	cur_frm.doc.bottom_attachment_type[0].bt_bottom_panel_height = bt_bottom_panel_height
 
 }
 
@@ -799,18 +799,18 @@ function get_top_attachment_type_values() {
 	var tp_hemming_fab_type = document.getElementById("tp_hemming_fab_type")
 	tp_hemming_fab_type.value = cur_frm.doc.top_attachment_type[0].tp_hemming_fab_type
 
-	var tp_bottom_pannel_type = document.getElementById("tp_bottom_pannel_type")
-	tp_bottom_pannel_type.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_type
-	var tp_bottom_pannel_gsm = document.getElementById("tp_bottom_pannel_gsm")
-	tp_bottom_pannel_gsm.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_gsm
-	var tp_bottom_pannel_coated = document.getElementById("tp_bottom_pannel_coated")
-	tp_bottom_pannel_coated.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_coated
-	var tp_bottom_pannel_total = document.getElementById("tp_bottom_pannel_total")
-	tp_bottom_pannel_total.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_total
-	var tp_bottom_pannel_dia = document.getElementById("tp_bottom_pannel_dia")
-	tp_bottom_pannel_dia.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_dia
-	var tp_bottom_pannel_height = document.getElementById("tp_bottom_pannel_height")
-	tp_bottom_pannel_height.value = cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_height
+	var tp_bottom_panel_type = document.getElementById("tp_bottom_panel_type")
+	tp_bottom_panel_type.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_type
+	var tp_bottom_panel_gsm = document.getElementById("tp_bottom_panel_gsm")
+	tp_bottom_panel_gsm.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_gsm
+	var tp_bottom_panel_coated = document.getElementById("tp_bottom_panel_coated")
+	tp_bottom_panel_coated.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_coated
+	var tp_bottom_panel_total = document.getElementById("tp_bottom_panel_total")
+	tp_bottom_panel_total.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_total
+	var tp_bottom_panel_dia = document.getElementById("tp_bottom_panel_dia")
+	tp_bottom_panel_dia.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_dia
+	var tp_bottom_panel_height = document.getElementById("tp_bottom_panel_height")
+	tp_bottom_panel_height.value = cur_frm.doc.top_attachment_type[0].tp_bottom_panel_height
 }
 
 function set_top_attachment_type_values(frm) {
@@ -869,18 +869,18 @@ function set_top_attachment_type_values(frm) {
 	var tp_hemming_fab_type = document.getElementById("tp_hemming_fab_type").value
 	cur_frm.doc.top_attachment_type[0].tp_hemming_fab_type = tp_hemming_fab_type
 
-	var tp_bottom_pannel_type = document.getElementById("tp_bottom_pannel_type").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_type = tp_bottom_pannel_type
-	var tp_bottom_pannel_gsm = document.getElementById("tp_bottom_pannel_gsm").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_gsm = tp_bottom_pannel_gsm
-	var tp_bottom_pannel_coated = document.getElementById("tp_bottom_pannel_coated").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_coated = tp_bottom_pannel_coated
-	var tp_bottom_pannel_total = document.getElementById("tp_bottom_pannel_total").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_total = tp_bottom_pannel_total
-	var tp_bottom_pannel_dia = document.getElementById("tp_bottom_pannel_dia").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_dia = tp_bottom_pannel_dia
-	var tp_bottom_pannel_height = document.getElementById("tp_bottom_pannel_height").value
-	cur_frm.doc.top_attachment_type[0].tp_bottom_pannel_height = tp_bottom_pannel_height
+	var tp_bottom_panel_type = document.getElementById("tp_bottom_panel_type").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_type = tp_bottom_panel_type
+	var tp_bottom_panel_gsm = document.getElementById("tp_bottom_panel_gsm").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_gsm = tp_bottom_panel_gsm
+	var tp_bottom_panel_coated = document.getElementById("tp_bottom_panel_coated").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_coated = tp_bottom_panel_coated
+	var tp_bottom_panel_total = document.getElementById("tp_bottom_panel_total").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_total = tp_bottom_panel_total
+	var tp_bottom_panel_dia = document.getElementById("tp_bottom_panel_dia").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_dia = tp_bottom_panel_dia
+	var tp_bottom_panel_height = document.getElementById("tp_bottom_panel_height").value
+	cur_frm.doc.top_attachment_type[0].tp_bottom_panel_height = tp_bottom_panel_height
 
 }
 
@@ -1007,10 +1007,10 @@ function get_body_fabric_values() {
 	var body_attachment_color = document.getElementById("body_attachment_color")
 	body_attachment_color.value = cur_frm.doc.body_fabric[0].body_attachment_color
 
-	var extra_bases_type = document.getElementById("extra_bases_type")
-	extra_bases_type.value = cur_frm.doc.body_fabric[0].extra_bases_type
-	var extra_bases_nos = document.getElementById("extra_bases_nos")
-	extra_bases_nos.value = cur_frm.doc.body_fabric[0].extra_bases_nos
+	var extra_base_type = document.getElementById("extra_base_type")
+	extra_base_type.value = cur_frm.doc.body_fabric[0].extra_base_type
+	var extra_base_nos = document.getElementById("extra_base_nos")
+	extra_base_nos.value = cur_frm.doc.body_fabric[0].extra_base_nos
 }
 
 function set_body_fabric_values(frm) {
@@ -1066,10 +1066,10 @@ function set_body_fabric_values(frm) {
 	var body_attachment_color = document.getElementById("body_attachment_color").value
 	cur_frm.doc.body_fabric[0].body_attachment_color = body_attachment_color
 
-	var extra_bases_type = document.getElementById("extra_bases_type").value
-	cur_frm.doc.body_fabric[0].extra_bases_type = extra_bases_type
-	var extra_bases_nos = document.getElementById("extra_bases_nos").value
-	cur_frm.doc.body_fabric[0].extra_bases_nos = extra_bases_nos
+	var extra_base_type = document.getElementById("extra_base_type").value
+	cur_frm.doc.body_fabric[0].extra_base_type = extra_base_type
+	var extra_base_nos = document.getElementById("extra_base_nos").value
+	cur_frm.doc.body_fabric[0].extra_base_nos = extra_base_nos
 }
 
 function get_webbing_add_ons_values() {
@@ -1082,8 +1082,8 @@ function get_webbing_add_ons_values() {
 	var full_loop_gsm = document.getElementById("full_loop_gsm")
 	full_loop_gsm.value = cur_frm.doc.webbing_add_ons[0].full_loop_gsm
 
-	var stevdor_type = document.getElementById("stevdor_type")
-	stevdor_type.value = cur_frm.doc.webbing_add_ons[0].stevdor_type
+	var stevedor_type = document.getElementById("stevedor_type")
+	stevedor_type.value = cur_frm.doc.webbing_add_ons[0].stevedor_type
 	var top_band_color = document.getElementById("top_band_color")
 	top_band_color.value = cur_frm.doc.webbing_add_ons[0].top_band_color
 	var top_band_size = document.getElementById("top_band_size")
@@ -1093,12 +1093,12 @@ function get_webbing_add_ons_values() {
 
 	var top_band_type = document.getElementById("top_band_type")
 	top_band_type.value = cur_frm.doc.webbing_add_ons[0].top_band_type
-	var stevdor_color = document.getElementById("stevdor_color")
-	stevdor_color.value = cur_frm.doc.webbing_add_ons[0].stevdor_color
-	var stevdor_size = document.getElementById("stevdor_size")
-	stevdor_size.value = cur_frm.doc.webbing_add_ons[0].stevdor_size
-	var stevdor_gsm = document.getElementById("stevdor_gsm")
-	stevdor_gsm.value = cur_frm.doc.webbing_add_ons[0].stevdor_gsm
+	var stevedor_color = document.getElementById("stevedor_color")
+	stevedor_color.value = cur_frm.doc.webbing_add_ons[0].stevedor_color
+	var stevedor_size = document.getElementById("stevedor_size")
+	stevedor_size.value = cur_frm.doc.webbing_add_ons[0].stevedor_size
+	var stevedor_gsm = document.getElementById("stevedor_gsm")
+	stevedor_gsm.value = cur_frm.doc.webbing_add_ons[0].stevedor_gsm
 
 	var sleeve_type = document.getElementById("sleeve_type")
 	sleeve_type.value = cur_frm.doc.webbing_add_ons[0].sleeve_type
@@ -1135,8 +1135,8 @@ function set_webbing_add_ons_values(frm) {
 	var full_loop_gsm = document.getElementById("full_loop_gsm").value
 	cur_frm.doc.webbing_add_ons[0].full_loop_gsm = full_loop_gsm
 
-	var stevdor_type = document.getElementById("stevdor_type").value
-	cur_frm.doc.webbing_add_ons[0].stevdor_type = stevdor_type
+	var stevedor_type = document.getElementById("stevedor_type").value
+	cur_frm.doc.webbing_add_ons[0].stevedor_type = stevedor_type
 	var top_band_color = document.getElementById("top_band_color").value
 	cur_frm.doc.webbing_add_ons[0].top_band_color = top_band_color
 	var top_band_size = document.getElementById("top_band_size").value
@@ -1146,12 +1146,12 @@ function set_webbing_add_ons_values(frm) {
 
 	var top_band_type = document.getElementById("top_band_type").value
 	cur_frm.doc.webbing_add_ons[0].top_band_type = top_band_type
-	var stevdor_color = document.getElementById("stevdor_color").value
-	cur_frm.doc.webbing_add_ons[0].stevdor_color = stevdor_color
-	var stevdor_size = document.getElementById("stevdor_size").value
-	cur_frm.doc.webbing_add_ons[0].stevdor_size = stevdor_size
-	var stevdor_gsm = document.getElementById("stevdor_gsm").value
-	cur_frm.doc.webbing_add_ons[0].stevdor_gsm = stevdor_gsm
+	var stevedor_color = document.getElementById("stevedor_color").value
+	cur_frm.doc.webbing_add_ons[0].stevedor_color = stevedor_color
+	var stevedor_size = document.getElementById("stevedor_size").value
+	cur_frm.doc.webbing_add_ons[0].stevedor_size = stevedor_size
+	var stevedor_gsm = document.getElementById("stevedor_gsm").value
+	cur_frm.doc.webbing_add_ons[0].stevedor_gsm = stevedor_gsm
 
 	var sleeve_type = document.getElementById("sleeve_type").value
 	cur_frm.doc.webbing_add_ons[0].sleeve_type = sleeve_type
@@ -1195,10 +1195,10 @@ function get_linear_type_values() {
 		normal_excess_wd.value = cur_frm.doc.linear_type[0].normal_excess_wd
 		var normal_gluing = document.getElementById("lt_gluing")
 		normal_gluing.value = cur_frm.doc.linear_type[0].normal_gluing
-		var normal_tabling = document.getElementById("lt_tabling")
-		normal_tabling.value = cur_frm.doc.linear_type[0].normal_tabling
-		var normal_tabling_nos = document.getElementById("lt_tabling_nos")
-		normal_tabling_nos.value = cur_frm.doc.linear_type[0].normal_tabling_nos
+		var normal_tabbing = document.getElementById("lt_tabbing")
+		normal_tabbing.value = cur_frm.doc.linear_type[0].normal_tabbing
+		var normal_tabbing_nos = document.getElementById("lt_tabbing_nos")
+		normal_tabbing_nos.value = cur_frm.doc.linear_type[0].normal_tabbing_nos
 		var normal_color = document.getElementById("lt_color")
 		normal_color.value = cur_frm.doc.linear_type[0].normal_color
 	}
@@ -1221,12 +1221,12 @@ function set_linear_type_values(frm) {
 		cur_frm.doc.linear_type[0].normal_excess_wd = normal_excess_wd
 		var normal_gluing = document.getElementById("lt_gluing").value
 		cur_frm.doc.linear_type[0].normal_gluing = normal_gluing
-		var normal_tabling = document.getElementById("lt_tabling").value
-		cur_frm.doc.linear_type[0].normal_tabling = normal_tabling
+		var normal_tabbing = document.getElementById("lt_tabbing").value
+		cur_frm.doc.linear_type[0].normal_tabbing = normal_tabbing
 		var normal_color = document.getElementById("lt_color").value
 		cur_frm.doc.linear_type[0].normal_color = normal_color
-		var normal_tabling_nos = document.getElementById("lt_tabling_nos").value
-		cur_frm.doc.linear_type[0].normal_tabling_nos = normal_tabling_nos
+		var normal_tabbing_nos = document.getElementById("lt_tabbing_nos").value
+		cur_frm.doc.linear_type[0].normal_tabbing_nos = normal_tabbing_nos
 	}
 }
 
@@ -1423,12 +1423,12 @@ function get_bag_size_values() {
 	var butterfly_fold_h = document.getElementById("butterfly_fold_h")
 	butterfly_fold_h.value = cur_frm.doc.bag_size[0].butterfly_fold_h
 
-	var net_total_l = document.getElementById("net_total_l")
-	net_total_l.value = cur_frm.doc.bag_size[0].net_total_l
-	var net_total_w_sp = document.getElementById("net_total_w_sp")
-	net_total_w_sp.value = cur_frm.doc.bag_size[0].net_total_w_sp
-	var net_total_h = document.getElementById("net_total_h")
-	net_total_h.value = cur_frm.doc.bag_size[0].net_total_h
+	var nett_total_l = document.getElementById("nett_total_l")
+	nett_total_l.value = cur_frm.doc.bag_size[0].nett_total_l
+	var nett_total_w_sp = document.getElementById("nett_total_w_sp")
+	nett_total_w_sp.value = cur_frm.doc.bag_size[0].nett_total_w_sp
+	var nett_total_h = document.getElementById("nett_total_h")
+	nett_total_h.value = cur_frm.doc.bag_size[0].nett_total_h
 
 	var sf = document.getElementById("sf")
 	sf.value = cur_frm.doc.bag_size[0].sf
@@ -1480,13 +1480,13 @@ function set_bag_size_values(frm) {
 	cur_frm.doc.bag_size[0].butterfly_fold_layers = butterfly_fold_layers
 	cur_frm.doc.bag_size[0].butterfly_fold_h = butterfly_fold_h
 
-	var net_total_l = document.getElementById("net_total_l").value
-	var net_total_w_sp = document.getElementById("net_total_w_sp").value
-	var net_total_h = document.getElementById("net_total_h").value
+	var nett_total_l = document.getElementById("nett_total_l").value
+	var nett_total_w_sp = document.getElementById("nett_total_w_sp").value
+	var nett_total_h = document.getElementById("nett_total_h").value
 
-	cur_frm.doc.bag_size[0].net_total_l = net_total_l
-	cur_frm.doc.bag_size[0].net_total_w_sp = net_total_w_sp
-	cur_frm.doc.bag_size[0].net_total_h = net_total_h
+	cur_frm.doc.bag_size[0].nett_total_l = nett_total_l
+	cur_frm.doc.bag_size[0].nett_total_w_sp = nett_total_w_sp
+	cur_frm.doc.bag_size[0].nett_total_h = nett_total_h
 
 	var sf = document.getElementById("sf").value
 	var swl = document.getElementById("swl").value
@@ -1494,83 +1494,6 @@ function set_bag_size_values(frm) {
 	cur_frm.doc.bag_size[0].sf = sf
 	cur_frm.doc.bag_size[0].swl = swl
 	cur_frm.refresh_fields("bag_size")
-}
-function changeBody(frm) {
-	let div = document.createElement("div");
-	div.style.width = "100%"
-	div.style.height = "140vh"
-	div.style.zIndex = "1022"
-	// div.style.background ="#eaf5ee"
-	div.style.padding = "5px"
-	div.style.borderRadius = "10px"
-	document.getElementsByClassName('form-layout')[0].id = cur_page.page.page.wrapper[0].id + "mainlayout"
-	document.getElementsByClassName('form-layout')[0].innerHTML = ""
-	let c = document.getElementsByClassName('col-lg-2')[0].style.display = "none"
-	let cmb = document.getElementsByClassName('comment-box')[0].style.display = "none"
-	let emb = document.getElementsByClassName('new-timeline')[0].style.display = "none"
-
-
-	document.getElementsByClassName('form-layout')[0]?.appendChild(div)
-	div.innerHTML = getHtml();
-}
-
-function getHtml() {
-	let body = `
-	<style>
-		.left-side{
-			float: left;
-		}
-	
-		@media (max-width: 100px) {
-			.left-side, .right-side {
-				float: none;
-			}
-		}
-	</style>
-	<div class= "col-xs-12">
-		<div class= "left-side" width= "100%">
-			${tab_bag_size()}
-			${tab_linear_type()}
-			${tab_body_fabric()}
-			${tab_categories()}
-			${tab_top_attachment_type()}
-			${tab_secondary_top()}
-			${left_attachment()}
-			
-		</div>
-		<div class= "left-side" width= "100%" style= "margin-left:20px">
-			<table style="margin-top:10px;" id="" width = 85%>
-				<tr>
-					<td style="border:1px solid black;width:120px">Bag Wt: </td>
-					<td style="border:1px solid black;width:30px">
-						<input type="text" id= "bag_wt" style= "width: 65px">
-					</td>
-					<td style="border:1px solid black;width:160px;">No of bags: </td>
-					<td style="border:1px solid black;width: 10px">
-						<input type="number" min="0" step="1" id= "no_of_bags" style= "width: 100px" class= "no-border">
-					</td>
-					<td style="border:1px solid black;width:80px">Po No: </td>
-					<td style="border:1px solid black;width:40px" colspan= 2>
-						<input type="text" id= "po_no" class= "no-border" style= "width: 80px">
-					</td>
-					<td style="border:1px solid black;width:120px">Po Date: </td>
-					<td style="border:1px solid black;width:40px" colspan= 2> 
-						<input type="Date" id= "po_date" class= "no-border" style= "width: 110px">
-					</td>
-				</tr>
-			</table>
-			${tab_webbing_type()}
-			${tab_tunnel_attachment_type()}
-			${tab_webbing_add_ons()}
-			${tab_accessories()}
-			${tab_extras_dese()}
-			${tab_bottom_attachment_type()}
-			${tab_secondary_bottom()}
-			${right_attachment()}
-		</div>
-	</div>
-	`
-	return body
 }
 
 // function _getHtml() {
@@ -1642,7 +1565,7 @@ function getHtml() {
 // 		${tab_body_fabric()}
 // 	</div>
 // 	<div>
-// 		${tab_extras_dese()}
+// 		${tab_extras_desc()}
 // 	</div>
 // 	<div>
 // 		${tab_categories()}
@@ -1673,13 +1596,13 @@ function tab_bag_size() {
 	let bag_size = `
 	<table style="margin-top:10px;" id="">
 		<tr>
-			<td style="border:1px solid black;width:120px">Enq No.</td>
+			<td style="border:1px solid black;width:120px">Eng No.</td>
 			<td style="border:1px solid black;width:30px">
-				<input type="text" id= "enq_no" class= "no-border" style= "width: 40px" value= '${cur_frm.doc.enq_no || ""}'>
+				<input type="text" id= "eng_no" class= "no-border" style= "width: 40px" value= '${cur_frm.doc.eng_no || ""}'>
 			</td>
 			<td style="border:1px solid black;width:50px">Name</td>
 			<td style="border:1px solid black;" colspan=2>
-				<input type="text" id= "enq_name" class= "no-border" style= "width: 115px" value= '${cur_frm.doc.enq_name || ""}'>
+				<input type="text" id= "eng_name" class= "no-border" style= "width: 115px" value= '${cur_frm.doc.eng_name || ""}'>
 			</td>
 		</tr>
 		<tr>
@@ -1723,8 +1646,8 @@ function tab_bag_size() {
 		<tr>
 			<td style="border:1px solid black;">Extra Fold - Bag Type:</td>
 			<td style="border:1px solid black;"></td>
-			<td style="border:1px solid black;">12 Cms</td>
-			<td style="border:1px solid black;">12 Cms</td>
+			<td style="border:1px solid black;">14 Cms</td>
+			<td style="border:1px solid black;">14 Cms</td>
 			<td style="border:1px solid black;">14 Cms</td>
 		</tr>
 		<tr>
@@ -1761,15 +1684,15 @@ function tab_bag_size() {
 		<tr>
 			<td style="border:1px solid black;">Net Total</td>
 			<td style="border:1px solid black;"></td>
-			<td style="border:1px solid black;" id= "net_total_l" >103 Cms</td>
-			<td style="border:1px solid black;" id= "net_total_w_sp" >103 Cms</td>
-			<td style="border:1px solid black;" id= "net_total_h" >120 Cms</td>
+			<td style="border:1px solid black;" id= "nett_total_l" >103 Cms</td>
+			<td style="border:1px solid black;" id= "nett_total_w_sp" >103 Cms</td>
+			<td style="border:1px solid black;" id= "nett_total_h" >120 Cms</td>
 		</tr>
 		<tr>
 			<td style="border:1px solid black;">SF</td>
 			<td style="border:1px solid black;">
 				<select id="sf" class= "no-border">
-					<option value="5.0">5:0</option>
+					<option value="5:01">5:01</option>
 				</select>
 			</td>
 			<td style="border:1px solid black;">SWL</td>
@@ -1785,7 +1708,7 @@ function tab_bag_size() {
 
 function right_attachment() {
 	let attachment = `
-	<div class= "col-xs-12" style="margin-top:10px;" id="" >
+	<div class= "col-xs-12" style="margin-top:10px;" id="" padding:0px">
 		<div class= "col-xs-6" style= "float: left; padding:0px">
 			<table style="margin-top:10px;" id="">
 				<tr>
@@ -1811,9 +1734,9 @@ function right_attachment() {
 					</td>
 				</tr>
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Pattel Closure</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Closure(2)</td>
 					<td style="border:1px solid black;" colspan=2>
-						<select id="bt_pattel_closure" class= "no-border">
+						<select id="bt_petal_closure" class= "no-border">
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>				
 						</select>
@@ -1871,15 +1794,15 @@ function right_attachment() {
 				</tr>
 				
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Pattel Rope</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Rope(2)</td>
 					<td style="border:1px solid black;">
-						<input type="number" min="0" step="1" id= "bt_pattel_rope_width" style= "width: 58px">
+						<input type="number" min="0" step="1" id= "bt_petal_rope_width" style= "width: 58px">
 					</td>
 					<td style="border:1px solid black;">
-						<input type="number" min="0" step="1" id= "bt_pattel_rope_gsm" style= "width: 58px">
+						<input type="number" min="0" step="1" id= "bt_petal_rope_gsm" style= "width: 58px">
 					</td>
 					<td style="border:1px solid black;">
-						<select id="bt_pattel_rope_color" class= "no-border" colspan =2>
+						<select id="bt_petal_rope_color" class= "no-border" colspan =2>
 							<option value="White">White</option>
 							<option value="Orange">Orange</option>
 						</select>
@@ -1937,9 +1860,9 @@ function left_attachment() {
 					</td>
 				</tr>
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Pattel Closure</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Closure</td>
 					<td style="border:1px solid black;" colspan=2>
-						<select id="tp_pattel_closure" class= "no-border">
+						<select id="tp_petal_closure" class= "no-border">
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>				
 						</select>
@@ -1997,15 +1920,15 @@ function left_attachment() {
 				</tr>
 				
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Pattel Rope</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Rope</td>
 					<td style="border:1px solid black;">
-						<input type="number" min="0" step="1" id= "tp_pattel_rope_width" style= "width: 58px">
+						<input type="number" min="0" step="1" id= "tp_petal_rope_width" style= "width: 58px">
 					</td>
 					<td style="border:1px solid black;">
-						<input type="number" min="0" step="1" id= "tp_pattel_rope_gsm" style= "width: 58px">
+						<input type="number" min="0" step="1" id= "tp_petal_rope_gsm" style= "width: 58px">
 					</td>
 					<td style="border:1px solid black;">
-						<select id="tp_pattel_rope_color" class= "no-border" colspan =2>
+						<select id="tp_petal_rope_color" class= "no-border" colspan =2>
 							<option value="White">White</option>
 							<option value="Orange">Orange</option>
 						</select>
@@ -2122,15 +2045,15 @@ function tab_secondary_top() {
 			<td style="border:1px solid black;" colspan= 2>color</td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;" colspan= 2>Bottom Flap</td>
+			<td style="border:1px solid black;" colspan= 2>Top Flap</td>
 			<td style="border:1px solid black;">
-				<select id="st_bottom_flap" class= "no-border" colspan =2>
+				<select id="st_top_flap" class= "no-border" colspan =2>
 					<option value="Yes">Yes</option>
 					<option value="No">No</option>
 				</select>
 			</td>
 			<td style="border:1px solid black;" colspan=2>
-				<select id="st_bottom_flap_type" class= "no-border">
+				<select id="st_top_flap_type" class= "no-border">
 					<option value="PP - Flat">PP - Flat</option>
 					<option value="PP - Circular">PP - Circular</option>
 					<option value="Sulzer">Sulzer</option>
@@ -2139,22 +2062,22 @@ function tab_secondary_top() {
 				</select>
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "st_bottom_flap_l" style= "width: 38px">
+				<input type="number" min="0" step="1" id= "st_top_flap_l" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "st_bottom_flap_w" style= "width: 38px">
+				<input type="number" min="0" step="1" id= "st_top_flap_w" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "st_bottom_flap_gsm" style= "width: 38px">
+				<input type="number" min="0" step="1" id= "st_top_flap_gsm" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "st_bottom_flap_coated" style= "width: 38px">
+				<input type="number" min="0" step="1" id= "st_top_flap_coated" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "st_bottom_flap_total" style= "width: 38px">
+				<input type="number" min="0" step="1" id= "st_top_flap_total" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<select id="st_bottom_flap_color" class= "no-border" colspan =2>
+				<select id="st_top_flap_color" class= "no-border" colspan =2>
 					<option value="White">White</option>
 					<option value="Orange">Orange</option>
 				</select>
@@ -2190,7 +2113,7 @@ function tab_bottom_attachment_type() {
 			<td style="border:1px solid black;">Coated</td>
 			<td style="border:1px solid black;">Total</td>
 			<td style="border:1px solid black;">Dia</td>
-			<td style="border:1px solid black;">height</td>
+			<td style="border:1px solid black;">HT 2</td>
 			<td style="border:1px solid black;" colspan= 2>color</td>
 		</tr>
 		<tr>
@@ -2248,9 +2171,9 @@ function tab_bottom_attachment_type() {
 			<td style="border:1px solid black;"></td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;" colspan= 3>bottom Pannel</td>
+			<td style="border:1px solid black;" colspan= 3>bottom Panel</td>
 			<td style="border:1px solid black;" colspan= 2>
-				<select id="bt_bottom_pannel_type" class= "no-border">
+				<select id="bt_bottom_panel_type" class= "no-border">
 					<option value="PP - Flat">PP - Flat</option>
 					<option value="PP - Circular">PP - Circular</option>
 					<option value="Sulzer">Sulzer</option>
@@ -2259,19 +2182,19 @@ function tab_bottom_attachment_type() {
 				</select>
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "bt_bottom_pannel_gsm" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "bt_bottom_panel_gsm" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "bt_bottom_pannel_coated" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "bt_bottom_panel_coated" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "bt_bottom_pannel_total" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "bt_bottom_panel_total" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "bt_bottom_pannel_dia" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "bt_bottom_panel_dia" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "bt_bottom_pannel_height" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "bt_bottom_panel_height" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;"></td>
 		</tr>
@@ -2290,7 +2213,7 @@ function tab_top_attachment_type() {
 			<td style="border:1px solid black;">Coated</td>
 			<td style="border:1px solid black;">Total</td>
 			<td style="border:1px solid black;">Dia</td>
-			<td style="border:1px solid black;">height</td>
+			<td style="border:1px solid black;">HT 1</td>
 			<td style="border:1px solid black;" colspan= 2>color</td>
 		</tr>
 		<tr>
@@ -2348,9 +2271,9 @@ function tab_top_attachment_type() {
 			<td style="border:1px solid black;"></td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;" colspan= 3>bottom Pannel</td>
+			<td style="border:1px solid black;" colspan= 3>Top Panel if Spout</td>
 			<td style="border:1px solid black;" colspan= 2>
-				<select id="tp_bottom_pannel_type" class= "no-border">
+				<select id="tp_bottom_panel_type" class= "no-border">
 					<option value="PP - Flat">PP - Flat</option>
 					<option value="PP - Circular">PP - Circular</option>
 					<option value="Sulzer">Sulzer</option>
@@ -2359,19 +2282,19 @@ function tab_top_attachment_type() {
 				</select>
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "tp_bottom_pannel_gsm" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "tp_bottom_panel_gsm" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "tp_bottom_pannel_coated" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "tp_bottom_panel_coated" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "tp_bottom_pannel_total" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "tp_bottom_panel_total" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "tp_bottom_pannel_dia" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "tp_bottom_panel_dia" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "tp_bottom_pannel_height" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "tp_bottom_panel_height" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;"></td>
 		</tr>
@@ -2463,8 +2386,8 @@ function tab_categories() {
 	return categories
 }
 
-function tab_extras_dese() {
-	let extras_dese = `
+function tab_extras_desc() {
+	let extras_desc = `
 	<table style="margin-top:10px;" id="">
 		<tr>
 			<td style="border:1px solid black;"></td>
@@ -2515,7 +2438,7 @@ function tab_extras_dese() {
 			<td style="border:1px solid black;"></td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;">Dese</td>
+			<td style="border:1px solid black;">Desc</td>
 			<td style="border:1px solid black;">No</td>
 			<td style="border:1px solid black;">Width</td>
 			<td style="border:1px solid black;">Gsm</td>
@@ -2584,7 +2507,7 @@ function tab_extras_dese() {
 		</tr>
 	</table>
 	`
-	return extras_dese
+	return extras_desc
 }
 
 function tab_body_fabric() {
@@ -2660,7 +2583,7 @@ function tab_body_fabric() {
 			</td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;" colspan= 2>Base GSM (4 Pannel)</td>
+			<td style="border:1px solid black;" colspan= 2>Base GSM (4 Panel)</td>
 			<td style="border:1px solid black;" colspan=2>
 				<select id="base_gsm__4p_type" class= "no-border">
 					<option value="PP Flat">PP Flat</option>
@@ -2718,10 +2641,10 @@ function tab_body_fabric() {
 			</td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;" colspan= 2>Extra Bases</td>
-			<td style="border:1px solid black;" colspan=2 id= "extra_bases_type">Nos</td>
+			<td style="border:1px solid black;" colspan= 2>Extra Base</td>
+			<td style="border:1px solid black;" colspan=2 id= "extra_base_type">Nos</td>
 			<td style="border:1px solid black;">
-				<input type="number" min="0" step="1" id= "extra_bases_nos" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "extra_base_nos" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;"></td>
 			<td style="border:1px solid black;"></td>
@@ -2823,7 +2746,7 @@ function tab_linear_type() {
 			<td style="border:1px solid black;">Excess Ht.</td>
 			<td style="border:1px solid black;">Excess wd</td>
 			<td style="border:1px solid black;">Gluing</td>
-			<td style="border:1px solid black;">Tabling</td>
+			<td style="border:1px solid black;">Tabbing</td>
 			<td style="border:1px solid black;" colspan =2>color</td>
 		</tr>
 		<tr>
@@ -2842,8 +2765,8 @@ function tab_linear_type() {
 				</select>
 			</td>
 			<td style="border:1px solid black;"> <input type="number" min="0" step="1" id= "lt_micron" style= "width: 58px"> </td>
-			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_excess_ht" style= "width: 58px"> </td>
-			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_excess_wd" style= "width: 58px"> </td>
+			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_excess_ht" style= "width: 70px"> </td>
+			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_excess_wd" style= "width: 70px"> </td>
 			<td style="border:1px solid black;">
 				<select id="lt_gluing" class= "no-border"  >
 					<option value="Yes">Yes</option>
@@ -2851,7 +2774,7 @@ function tab_linear_type() {
 				</select>
 			</td>
 			<td style="border:1px solid black;">
-				<select id="lt_tabling" class= "no-border"  >
+				<select id="lt_tabbing" class= "no-border"  >
 					<option value="Yes">Yes</option>
 					<option value="No">No</option>
 				</select>
@@ -2870,7 +2793,7 @@ function tab_linear_type() {
 			<td style="border:1px solid black;"></td>
 			<td style="border:1px solid black;"></td>
 			<td style="border:1px solid black;"></td>
-			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_tabling_nos" style= "width: 58px"> </td>
+			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "lt_tabbing_nos" style= "width: 58px"> </td>
 			<td style="border:1px solid black;" colspan =2></td>
 		</tr>
 	</table>
@@ -2918,7 +2841,7 @@ function tab_webbing_add_ons() {
 			<td style="border:1px solid black;" colspan =2>Webbing Add Ons</td>
 			<td style="border:1px solid black;" colspan =2>Full Loop</td>
 			<td style="border:1px solid black;" colspan =2>Top Band</td>
-			<td style="border:1px solid black;" colspan =2>Stevdor</td>
+			<td style="border:1px solid black;" colspan =2>Stevedor</td>
 			<td style="border:1px solid black;" colspan =2>Sleeve</td>
 			<td style="border:1px solid black;" colspan =2>
 				<select id="patch_type" class= "no-border">
@@ -2941,7 +2864,7 @@ function tab_webbing_add_ons() {
 				</select>
 			</td>
 			<td style="border:1px solid black;" colspan =2>
-				<select id="stevdor_type" class= "no-border" colspan =2>
+				<select id="stevedor_type" class= "no-border" colspan =2>
 					<option value="Yes">Yes</option>
 					<option value="No">No</option>
 				</select>
@@ -2972,7 +2895,7 @@ function tab_webbing_add_ons() {
 				</select>
 			</td>
 			<td style="border:1px solid black;" colspan =2>
-				<select id="stevdor_color" class= "no-border" colspan =2>
+				<select id="stevedor_color" class= "no-border" colspan =2>
 					<option value="White">White</option>
 				</select>
 			</td>
@@ -2996,7 +2919,7 @@ function tab_webbing_add_ons() {
 				<input type="number" min="0" step="1" id= "top_band_size" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;" colspan =2>
-				<input type="number" min="0" step="1" id= "stevdor_size" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "stevedor_size" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;" colspan =2>
 				<input type="number" min="0" step="1" id= "sleeve_size" style= "width: 58px">
@@ -3014,7 +2937,7 @@ function tab_webbing_add_ons() {
 				<input type="number" min="0" step="1" id= "top_band_gsm" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;" colspan =2>
-				<input type="number" min="0" step="1" id= "stevdor_gsm" style= "width: 58px">
+				<input type="number" min="0" step="1" id= "stevedor_gsm" style= "width: 58px">
 			</td>
 			<td style="border:1px solid black;" colspan =2>
 				<input type="number" min="0" step="1" id= "sleeve_gsm" style= "width: 58px">
@@ -3096,3 +3019,83 @@ function tab_webbing_type() {
 
 	return webbing_type
 }
+
+function getHtml() {
+	let body = `
+	<style>
+		.left-side{
+			float: left;
+		}
+	
+		@media (max-width: 100px) {
+			.left-side, .right-side {
+				float: none;
+			}
+		}
+	</style>
+	<div class= "col-xs-12">
+		<div class= "left-side" width= "100%">
+			${tab_bag_size()}
+			${tab_linear_type()}
+			${tab_body_fabric()}
+			${tab_categories()}
+			${tab_top_attachment_type()}
+			${tab_secondary_top()}
+			${left_attachment()}
+			
+		</div>
+		<div class= "left-side" width= "100%" style= "margin-left:20px">
+			<table style="margin-top:10px;" id="" width = 85%>
+				<tr>
+					<td style="border:1px solid black;width:120px">Bag Wt: </td>
+					<td style="border:1px solid black;width:30px">
+						<input type="text" id= "bag_wt" style= "width: 65px">
+					</td>
+					<td style="border:1px solid black;width:160px;">No of bags: </td>
+					<td style="border:1px solid black;width: 10px">
+						<input type="number" min="0" step="1" id= "no_of_bags" style= "width: 100px" class= "no-border">
+					</td>
+					<td style="border:1px solid black;width:80px">Po No: </td>
+					<td style="border:1px solid black;width:40px" colspan= 2>
+						<input type="text" id= "po_no" class= "no-border" style= "width: 80px">
+					</td>
+					<td style="border:1px solid black;width:120px">Po Date: </td>
+					<td style="border:1px solid black;width:40px" colspan= 2> 
+						<input type="Date" id= "po_date" class= "no-border" style= "width: 110px">
+					</td>
+				</tr>
+			</table>
+			${tab_webbing_type()}
+			${tab_tunnel_attachment_type()}
+			${tab_webbing_add_ons()}
+			${tab_accessories()}
+			${tab_extras_desc()}
+			${tab_bottom_attachment_type()}
+			${tab_secondary_bottom()}
+			${right_attachment()}
+		</div>
+	</div>
+	`
+	return body
+}
+
+function changeBody(frm) {
+	let div = document.createElement("div");
+	div.style.width = "100%"
+	div.style.height = "140vh"
+	div.style.zIndex = "1022"
+	div.style.background = "#eaf5ee"
+	div.style.padding = "5px"
+	div.style.borderRadius = "10px"
+	document.getElementsByClassName('form-layout')[0].id = cur_page.page.page.wrapper[0].id + "mainlayout"
+	document.getElementsByClassName('form-layout')[0].innerHTML = ""
+	let c = document.getElementsByClassName('col-lg-2')[0].style.display = "none"
+	let cmb = document.getElementsByClassName('comment-box')[0].style.display = "none"
+	let emb = document.getElementsByClassName('new-timeline')[0].style.display = "none"
+
+
+	document.getElementsByClassName('form-layout')[0]?.appendChild(div)
+	div.innerHTML = getHtml();
+}
+
+
