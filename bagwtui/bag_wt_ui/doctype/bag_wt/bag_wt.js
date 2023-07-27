@@ -1682,7 +1682,7 @@ function tab_bag_size() {
 			<td style="border:1px solid black;"><input type="number" min="0" step="1" id= "butterfly_fold_h" style= "width: 58px"></td>
 		</tr>
 		<tr>
-			<td style="border:1px solid black;">Net Total</td>
+			<td style="border:1px solid black;">Nett Total</td>
 			<td style="border:1px solid black;"></td>
 			<td style="border:1px solid black;" id= "nett_total_l" >103 Cms</td>
 			<td style="border:1px solid black;" id= "nett_total_w_sp" >103 Cms</td>
@@ -1734,7 +1734,7 @@ function right_attachment() {
 					</td>
 				</tr>
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Petal Closure(2)</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Closure</td>
 					<td style="border:1px solid black;" colspan=2>
 						<select id="bt_petal_closure" class= "no-border">
 							<option value="Yes">Yes</option>
@@ -1794,7 +1794,7 @@ function right_attachment() {
 				</tr>
 				
 				<tr>
-					<td style="border:1px solid black;" colspan= 2>Petal Rope(2)</td>
+					<td style="border:1px solid black;" colspan= 2>Petal Rope</td>
 					<td style="border:1px solid black;">
 						<input type="number" min="0" step="1" id= "bt_petal_rope_width" style= "width: 58px">
 					</td>
@@ -2113,7 +2113,7 @@ function tab_bottom_attachment_type() {
 			<td style="border:1px solid black;">Coated</td>
 			<td style="border:1px solid black;">Total</td>
 			<td style="border:1px solid black;">Dia</td>
-			<td style="border:1px solid black;">HT 2</td>
+			<td style="border:1px solid black;">HT</td>
 			<td style="border:1px solid black;" colspan= 2>color</td>
 		</tr>
 		<tr>
@@ -2213,7 +2213,7 @@ function tab_top_attachment_type() {
 			<td style="border:1px solid black;">Coated</td>
 			<td style="border:1px solid black;">Total</td>
 			<td style="border:1px solid black;">Dia</td>
-			<td style="border:1px solid black;">HT 1</td>
+			<td style="border:1px solid black;">HT</td>
 			<td style="border:1px solid black;" colspan= 2>color</td>
 		</tr>
 		<tr>
